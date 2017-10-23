@@ -453,7 +453,7 @@ function replaceSpecialAttribs(template, attribs) {
       return attr[name];
     });
   }
-  template = template.replace(/\\n/g, "\n").replace(/<[^>]*>/g, "");
+  template = template.replace(/\\n/g, "\n");//.replace(/<[^>]*>/g, "");
   return template;
 }
 
