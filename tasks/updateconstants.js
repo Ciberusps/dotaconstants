@@ -101,12 +101,15 @@ const sources = [
   },
   {
     key: "item_ids",
-    url: "http://www.dota2.com/jsfeed/itemdata?l=english",
+    url: "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/items.json",
     transform: respObj => {
-      const items = respObj.itemdata;
+      const items = respObj.DOTAAbilities;
       const itemIds = {};
       for (const key in items) {
-        itemIds[items[key].id] = key;
+        const item = items[key];
+        if (typeof item === 'object' && 'ID' in item) {
+          itemIds[item.ID] = key.replace('item_', '');
+        }
       }
       return itemIds;
     },
@@ -128,7 +131,7 @@ const sources = [
       }
       return itemGroups;
     },
-  }, 
+  },
   {
     key: "abilities",
     url: [
@@ -161,7 +164,7 @@ const sources = [
         if(scripts[key].AbilityManaCost || scripts[key].AbilityCooldown) {
           if(scripts[key].AbilityManaCost) {
             ability.mc = formatValues(scripts[key].AbilityManaCost, false, "/");
-          } 
+          }
           if(scripts[key].AbilityCooldown) {
             ability.cd = formatValues(scripts[key].AbilityCooldown, false, "/");
           }
@@ -252,20 +255,20 @@ const sources = [
           const newHero = {"abilities": [], "talents": []};
           Object.keys(DOTAHeroes[heroKey]).forEach(function(key){
             var abilityRegexMatch = key.match(/Ability([0-9]+)/);
-            if (abilityRegexMatch){ 
-              var abilityNum = parseInt(abilityRegexMatch[1]); 
+            if (abilityRegexMatch){
+              var abilityNum = parseInt(abilityRegexMatch[1]);
               if (abilityNum < 10){
-                newHero["abilities"].push(DOTAHeroes[heroKey][key]); 
+                newHero["abilities"].push(DOTAHeroes[heroKey][key]);
               }
               else{
-                // -8 not -10 because going from 0-based index -> 1 and flooring divison result 
+                // -8 not -10 because going from 0-based index -> 1 and flooring divison result
                 newHero["talents"].push({"name": DOTAHeroes[heroKey][key], "level": Math.floor((abilityNum - 8) / 2)});
               }
             }
           });
           heroAbilities[heroKey] = newHero;
         }
-      }); 
+      });
       return heroAbilities;
     },
   }, {
@@ -281,7 +284,7 @@ const sources = [
       }
       return region;
     },
-  }, {
+  }, /* {
     key: "cluster",
     url: "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/regions.json",
     transform: respObj => {
@@ -297,7 +300,7 @@ const sources = [
       cluster["121"] = Number(regions['USEast'].region);
       return cluster;
     },
-  }, {
+  }, */ {
     key: "countries",
     url: "https://raw.githubusercontent.com/mledoze/countries/master/countries.json",
     transform: respObj => {
@@ -433,11 +436,11 @@ function formatAttrib(attributes, strings, strings_prefix) {
 // Formats templates like "Storm's movement speed is %storm_move_speed%" with "Storm's movement speed is 32"
 // args are the template, and a list of attribute dictionaries, like the ones in AbilitySpecial for each ability in the npc_abilities.json from the vpk
 function replaceSpecialAttribs(template, attribs) {
-  if (!template) { 
-    return template; 
+  if (!template) {
+    return template;
   }
   if (attribs) {
-    template = template.replace(/%([^%]*)%/g, function(str, name) {
+    template = template.replace(/%([^% ]*)%/g, function(str, name) {
       if (name == "") {
         return "<b>%</b>";
       }
@@ -445,7 +448,7 @@ function replaceSpecialAttribs(template, attribs) {
       if (!attr && name[0] === "d") { // Because someone at valve messed up in 4 places
         name = name.substr(1);
         attr = attribs.find(attr => name in attr);
-      } 
+      }
       if (!attr) {
         console.log(`cant find attribute %${name}%`);
         return `%${name}%`;
