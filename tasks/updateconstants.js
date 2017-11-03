@@ -439,7 +439,7 @@ function replaceSpecialAttribs(template, attribs) {
   if (attribs) {
     template = template.replace(/%([^%]*)%/g, function(str, name) {
       if (name == "") {
-        return "%";
+        return "<b>%</b>";
       }
       var attr = attribs.find(attr => name in attr);
       if (!attr && name[0] === "d") { // Because someone at valve messed up in 4 places
@@ -450,10 +450,10 @@ function replaceSpecialAttribs(template, attribs) {
         console.log(`cant find attribute %${name}%`);
         return `%${name}%`;
       }
-      return attr[name];
+      return "<b>" + Math.abs(attr[name]) + "</b>";
     });
   }
-  template = template.replace(/\\n/g, "\n");//.replace(/<[^>]*>/g, "");
+  template = template.replace(/\\n/g, "\n").replace(/<span.*>.*<\/span>/g, "<b>$&</b>"); //.replace(/<[^>]*>/g, "");
   return template;
 }
 
