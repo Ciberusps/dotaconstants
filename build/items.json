@@ -5123,6 +5123,430 @@
     ],
     "created": true
   },
+<<<<<<< HEAD
+=======
+  "meteor_hammer": {
+    "id": 223,
+    "img": "/apps/dota2/images/items/meteor_hammer_lg.png?3",
+    "dname": "Meteor Hammer",
+    "qual": "epic",
+    "cost": 2625,
+    "desc": "Active: Meteor Hammer CHANNELED - After a succesful channel, summons a meteor that strikes a 300 AoE, stunning enemies for 1.75 seconds and dealing impact damage. Continues to deal damage over time to enemies units and buildings for 6 seconds.Building Impact Damage: 75 Building Over Time Damage: 60 Non-Building Impact Damage: 150 Non-Building Over Time Damage: 115 Channel Duration: 3 seconds.Landing Time: 0.5 seconds.",
+    "notes": "",
+    "attrib": [
+      {
+        "key": "bonus_strength",
+        "header": "+",
+        "value": "12",
+        "footer": "Strength"
+      },
+      {
+        "key": "bonus_intellect",
+        "header": "+",
+        "value": "12",
+        "footer": "Intelligence"
+      },
+      {
+        "key": "bonus_health_regen",
+        "header": "+",
+        "value": "4",
+        "footer": "HP Regeneration"
+      },
+      {
+        "key": "bonus_mana_regen",
+        "header": "+",
+        "value": "1.5",
+        "footer": "Mana Regeneration"
+      },
+      {
+        "key": "burn_dps_buildings",
+        "header": "BURN DPS BUILDINGS:",
+        "value": "60",
+        "generated": true
+      },
+      {
+        "key": "burn_dps_units",
+        "header": "BURN DPS UNITS:",
+        "value": "115",
+        "generated": true
+      },
+      {
+        "key": "burn_duration",
+        "header": "BURN DURATION:",
+        "value": "6",
+        "generated": true
+      },
+      {
+        "key": "stun_duration",
+        "header": "STUN DURATION:",
+        "value": "1.75",
+        "generated": true
+      },
+      {
+        "key": "burn_interval",
+        "header": "BURN INTERVAL:",
+        "value": "1",
+        "generated": true
+      },
+      {
+        "key": "land_time",
+        "header": "LAND TIME:",
+        "value": "0.5",
+        "generated": true
+      },
+      {
+        "key": "impact_radius",
+        "header": "IMPACT RADIUS:",
+        "value": "300",
+        "generated": true
+      },
+      {
+        "key": "max_duration",
+        "header": "MAX DURATION:",
+        "value": "3",
+        "generated": true
+      },
+      {
+        "key": "impact_damage_buildings",
+        "header": "IMPACT DAMAGE BUILDINGS:",
+        "value": "75",
+        "generated": true
+      },
+      {
+        "key": "impact_damage_units",
+        "header": "IMPACT DAMAGE UNITS:",
+        "value": "150",
+        "generated": true
+      }
+    ],
+    "mc": 125,
+    "cd": 40,
+    "lore": "",
+    "components": [
+      "ogre_axe",
+      "staff_of_wizardry",
+      "ring_of_regen",
+      "sobi_mask"
+    ],
+    "created": true
+  },
+  "nullifier": {
+    "id": 225,
+    "img": "/apps/dota2/images/items/nullifier_lg.png?3",
+    "dname": "Nullifier",
+    "qual": "epic",
+    "cost": 4700,
+    "desc": "Active: Nullify Dispels the target and mutes them for 5 seconds. Anytime the muted target is attacked, it will be slowed by 100% for 0.4 seconds.",
+    "notes": "",
+    "attrib": [
+      {
+        "key": "bonus_damage",
+        "header": "+",
+        "value": "65",
+        "footer": "Damage"
+      },
+      {
+        "key": "bonus_armor",
+        "header": "+",
+        "value": "5",
+        "footer": "Armor"
+      },
+      {
+        "key": "bonus_regen",
+        "header": "+",
+        "value": "5",
+        "footer": "HP Regeneration"
+      },
+      {
+        "key": "mute_duration",
+        "header": "MUTE DURATION:",
+        "value": "5",
+        "generated": true
+      },
+      {
+        "key": "projectile_speed",
+        "header": "PROJECTILE SPEED:",
+        "value": "1200",
+        "generated": true
+      },
+      {
+        "key": "slow_pct",
+        "header": "SLOW PCT:",
+        "value": "100",
+        "generated": true
+      },
+      {
+        "key": "slow_interval_duration",
+        "header": "SLOW INTERVAL DURATION:",
+        "value": "0.4",
+        "generated": true
+      }
+    ],
+    "mc": 100,
+    "cd": 14,
+    "lore": "",
+    "components": [
+      "relic",
+      "helm_of_iron_will"
+    ],
+    "created": true
+  },
+  "recipe_combo_breaker": {
+    "id": 255,
+    "img": "/apps/dota2/images/items/recipe_lg.png?3",
+    "dname": "Aeon Disk Recipe",
+    "cost": 1675,
+    "desc": "",
+    "notes": "",
+    "attrib": [],
+    "mc": false,
+    "cd": false,
+    "lore": "",
+    "components": null,
+    "created": false
+  },
+  "combo_breaker": {
+    "id": 256,
+    "img": "/apps/dota2/images/items/combo_breaker_lg.png?3",
+    "dname": "Aeon Disk",
+    "qual": "epic",
+    "cost": 3675,
+    "desc": "Passive: Combo Breaker When you take damage and your health falls below 80%, a strong dispel is applied and you gain a 2.5 second buff that causes all damage you deal and are dealt to be reduced to zero. Only triggers on player based damage. \n\nPassive: Status Resistance Reduces status effect durations by 25%. ",
+    "notes": "",
+    "attrib": [
+      {
+        "key": "bonus_health",
+        "header": "+",
+        "value": "250",
+        "footer": "Health"
+      },
+      {
+        "key": "bonus_mana",
+        "header": "+",
+        "value": "250",
+        "footer": "Mana"
+      },
+      {
+        "key": "health_threshold_pct",
+        "header": "HEALTH THRESHOLD PCT:",
+        "value": "80",
+        "generated": true
+      },
+      {
+        "key": "status_resistance",
+        "header": "STATUS RESISTANCE:",
+        "value": "25",
+        "generated": true
+      },
+      {
+        "key": "buff_duration",
+        "header": "BUFF DURATION:",
+        "value": "2.5",
+        "generated": true
+      }
+    ],
+    "mc": false,
+    "cd": 100,
+    "lore": "",
+    "components": [
+      "vitality_booster",
+      "energy_booster"
+    ],
+    "created": true
+  },
+  "recipe_trident": {
+    "id": 258,
+    "img": "/apps/dota2/images/items/recipe_lg.png?3",
+    "cost": 500,
+    "desc": "",
+    "notes": "",
+    "attrib": [],
+    "mc": false,
+    "cd": false,
+    "lore": "",
+    "components": null,
+    "created": false
+  },
+  "trident": {
+    "id": 259,
+    "img": "/apps/dota2/images/items/trident_lg.png?3",
+    "dname": "Kaya",
+    "qual": "epic",
+    "cost": 1950,
+    "desc": "",
+    "notes": "",
+    "attrib": [
+      {
+        "key": "bonus_intellect",
+        "header": "+",
+        "value": "16",
+        "footer": "Intelligence"
+      },
+      {
+        "key": "spell_amp",
+        "header": "+Spell Amplification",
+        "value": "10%"
+      },
+      {
+        "key": "manacost_reduction",
+        "header": "+Manacost and Manaloss Reduction",
+        "value": "10%"
+      }
+    ],
+    "mc": false,
+    "cd": false,
+    "lore": "",
+    "components": [
+      "staff_of_wizardry",
+      "robe"
+    ],
+    "created": true
+  },
+  "refresher_shard": {
+    "id": 260,
+    "img": "/apps/dota2/images/items/refresher_shard_lg.png?3",
+    "dname": "Refresher Shard",
+    "qual": "consumable",
+    "cost": 1000,
+    "desc": "Use: Reset CooldownsResets the cooldowns of all your items and abilities.",
+    "notes": "Refresher Shard is shareable.",
+    "attrib": [],
+    "mc": false,
+    "cd": 200,
+    "lore": "",
+    "components": null,
+    "created": false
+  },
+  "recipe_spirit_vessel": {
+    "id": 266,
+    "img": "/apps/dota2/images/items/recipe_lg.png?3",
+    "cost": 600,
+    "desc": "",
+    "notes": "",
+    "attrib": [],
+    "mc": false,
+    "cd": false,
+    "lore": "",
+    "components": null,
+    "created": false
+  },
+  "spirit_vessel": {
+    "id": 267,
+    "img": "/apps/dota2/images/items/spirit_vessel_lg.png?3",
+    "dname": "Spirit Vessel",
+    "qual": "rare",
+    "cost": 2825,
+    "desc": "Active: Soul Release When used against enemies, it reduces health by 3% of current health per second, and reduces HP regeneration and healing by 70%. Deals 20 damage per second. When used on allies, it increases health by 1% of current health per second, and increases HP regeneration and healing by 20%. Provides 35 health regeneration per second. Lasts 8 seconds.  Gains charges every time an enemy hero dies within 1400 units.  Only the closest Spirit Vessel to the dying hero will gain a charge.Cast Range: 950 ",
+    "notes": "",
+    "attrib": [
+      {
+        "key": "bonus_health",
+        "header": "+",
+        "value": "250",
+        "footer": "Health"
+      },
+      {
+        "key": "bonus_movement_speed",
+        "header": "+",
+        "value": "30",
+        "footer": "Movement Speed"
+      },
+      {
+        "key": "bonus_mana_regen",
+        "header": "+",
+        "value": "1",
+        "footer": "Mana Regeneration"
+      },
+      {
+        "key": "bonus_all_stats",
+        "header": "+",
+        "value": "2",
+        "footer": "All Attributes"
+      },
+      {
+        "key": "bonus_armor",
+        "header": "+",
+        "value": "2",
+        "footer": "Armor"
+      },
+      {
+        "key": "soul_radius",
+        "header": "SOUL RADIUS:",
+        "value": "1400",
+        "generated": true
+      },
+      {
+        "key": "soul_initial_charge",
+        "header": "SOUL INITIAL CHARGE:",
+        "value": "2",
+        "generated": true
+      },
+      {
+        "key": "soul_additional_charges",
+        "header": "SOUL ADDITIONAL CHARGES:",
+        "value": "1",
+        "generated": true
+      },
+      {
+        "key": "soul_heal_amount",
+        "header": "SOUL HEAL AMOUNT:",
+        "value": "35",
+        "generated": true
+      },
+      {
+        "key": "soul_damage_amount",
+        "header": "SOUL DAMAGE AMOUNT:",
+        "value": "20",
+        "generated": true
+      },
+      {
+        "key": "duration",
+        "header": "DURATION:",
+        "value": "8",
+        "generated": true
+      },
+      {
+        "key": "soul_release_range_tooltip",
+        "header": "SOUL RELEASE RANGE TOOLTIP:",
+        "value": "950",
+        "generated": true
+      },
+      {
+        "key": "hp_regen_reduction_enemy",
+        "header": "HP REGEN REDUCTION ENEMY:",
+        "value": "70",
+        "generated": true
+      },
+      {
+        "key": "hp_regen_increase_allies",
+        "header": "HP REGEN INCREASE ALLIES:",
+        "value": "20",
+        "generated": true
+      },
+      {
+        "key": "enemy_hp_drain",
+        "header": "ENEMY HP DRAIN:",
+        "value": "3",
+        "generated": true
+      },
+      {
+        "key": "ally_hp_gain",
+        "header": "ALLY HP GAIN:",
+        "value": "1",
+        "generated": true
+      }
+    ],
+    "mc": false,
+    "cd": 7,
+    "lore": "",
+    "components": [
+      "urn_of_shadows",
+      "vitality_booster",
+      "wind_lace"
+    ],
+    "created": true
+  },
+>>>>>>> f86606388726f85fbbe3a146e786f898035c6b26
   "vanguard": {
     "id": 125,
     "img": "/apps/dota2/images/items/vanguard_lg.png?3",
@@ -5747,7 +6171,11 @@
       {
         "key": "bonus_damage",
         "header": "+",
+<<<<<<< HEAD
         "value": "55",
+=======
+        "value": "45",
+>>>>>>> f86606388726f85fbbe3a146e786f898035c6b26
         "footer": "Damage"
       },
       {
@@ -6994,7 +7422,11 @@
     "dname": "Mask of Madness",
     "qual": "artifact",
     "cost": 1975,
+<<<<<<< HEAD
     "desc": "<h1>Active: Berserk</h1>Gives 110 attack speed and 17% movement speed, but reduces your armor by 6 and silences you.  Lasts 8 seconds.\n<h1>Passive: Lifesteal</h1>Heals the attacker for 15% of attack damage dealt. <br><br>Mask of Madness is a Unique Attack Modifier, and does not stack with other Unique Attack Modifiers.",
+=======
+    "desc": "Active: BerserkGives 110 attack speed and 17% movement speed, but reduces your armor by 7 and silences you.  Lasts 8 seconds.\nPassive: LifestealHeals the attacker for 15% of attack damage dealt.",
+>>>>>>> f86606388726f85fbbe3a146e786f898035c6b26
     "notes": "",
     "attrib": [
       {
@@ -7030,7 +7462,7 @@
       {
         "key": "berserk_armor_reduction",
         "header": "BERSERK ARMOR REDUCTION:",
-        "value": "6",
+        "value": "7",
         "generated": true
       },
       {
