@@ -8,11 +8,7 @@
     "behavior": "Passive",
     "dmg_type": "Physical",
     "bkbpierce": "No",
-<<<<<<< HEAD
-    "desc": "Burns an opponent's mana on each attack.  Mana Break deals 60<b>%</b> of the mana burned as damage to the target.",
-=======
-    "desc": "Burns an opponent's mana on each attack.  Mana Break deals 50% of the mana burned as damage to the target.",
->>>>>>> a73c27f395d3b40574b3a223e1cb285e53ebae1a
+    "desc": "Burns an opponent's mana on each attack.  Mana Break deals 50<b>%</b> of the mana burned as damage to the target.",
     "attrib": [
       {
         "key": "damage_per_burn",
@@ -5140,11 +5136,7 @@
     ],
     "dmg_type": "Magical",
     "bkbpierce": "Yes",
-<<<<<<< HEAD
-    "desc": "Grabs the nearest unit in a 275 radius around Tiny, ally or enemy, and launches it at the target unit or rune to deal damage where they land.  If the tossed unit is an enemy, it will take an extra 20<b>%</b> damage. Toss does more damage with each level in Grow.",
-=======
-    "desc": "Grabs the nearest unit in a 275 radius around Tiny, ally or enemy, and launches it at the target unit or rune to deal damage where they land.  If the tossed unit is an enemy, it will take an extra 20% damage.",
->>>>>>> a73c27f395d3b40574b3a223e1cb285e53ebae1a
+    "desc": "Grabs the nearest unit in a 275 radius around Tiny, ally or enemy, and launches it at the target unit or rune to deal damage where they land.  If the tossed unit is an enemy, it will take an extra 20<b>%</b> damage.",
     "attrib": [
       {
         "key": "duration",
@@ -7190,11 +7182,7 @@
       "No Target",
       "Channeled"
     ],
-<<<<<<< HEAD
-    "desc": "CHANNELED - Phases out of the world while striking every enemy from behind in a <b>500</b> AoE once per second.\n\nUpgradable by Aghanim's Scepter.",
-=======
     "desc": "CHANNELED - Riki phases out of the world while striking every enemy from behind in an area around him once per second.\n\nUpgradable by Aghanim's Scepter.",
->>>>>>> a73c27f395d3b40574b3a223e1cb285e53ebae1a
     "attrib": [
       {
         "key": "range",
@@ -7801,11 +7789,7 @@
     ],
     "dmg_type": "Magical",
     "bkbpierce": "Yes",
-<<<<<<< HEAD
-    "desc": "Sniper locks onto a target enemy unit and, after <b>2</b> seconds, fires a devastating shot that deals damage at long range, and mini-stuns the target.\n\nUpgradable by Aghanim's Scepter.",
-=======
     "desc": "Sniper locks onto a target enemy unit and, after a short aiming duration, fires a devastating shot that deals damage at long range and mini-stuns the target.\n\nUpgradable by Aghanim's Scepter.",
->>>>>>> a73c27f395d3b40574b3a223e1cb285e53ebae1a
     "dmg": [
       "320",
       "485",
@@ -8075,11 +8059,7 @@
     "dname": "Fatal Bonds",
     "behavior": "Unit Target",
     "bkbpierce": "No",
-<<<<<<< HEAD
-    "desc": "Binds several enemy units together, causing <b>25</b><b>%</b> of the damage dealt to one of them to be felt by the others.",
-=======
     "desc": "Binds several enemy units together, causing a percentage of the damage dealt to one of them to be felt by the others.",
->>>>>>> a73c27f395d3b40574b3a223e1cb285e53ebae1a
     "dmg": "0",
     "attrib": [
       {
@@ -9811,11 +9791,7 @@
     "dname": "Psionic Trap",
     "behavior": "Point Target",
     "bkbpierce": "No",
-<<<<<<< HEAD
-    "desc": "Templar Assassin places mystical traps that invisibly monitor enemy movement. When sprung at her command, they exert a slowing influence of 30<b>%</b> in the area. Traps charge up to slow an additional 5<b>%</b> every second, up to 50<b>%</b>. Deals bonus damage when fully charged.",
-=======
-    "desc": "Templar Assassin places mystical traps that invisibly monitor enemy movement. When sprung at her command, they exert a slowing influence of 30% in the area. Traps charge up to slow 60% after 4 seconds. Deals bonus damage when fully charged.",
->>>>>>> a73c27f395d3b40574b3a223e1cb285e53ebae1a
+    "desc": "Templar Assassin places mystical traps that invisibly monitor enemy movement. When sprung at her command, they exert a slowing influence of <b>30</b><b>%</b> in the area. Traps charge up to slow <b>60</b><b>%</b> after <b>4</b> seconds. Deals bonus damage when fully charged.",
     "attrib": [
       {
         "key": "max_traps",
@@ -14285,13 +14261,8 @@
     "dname": "Desolate",
     "behavior": "Passive",
     "dmg_type": "Pure",
-<<<<<<< HEAD
-    "bkbpierce": "No",
-    "desc": "Deals bonus damage whenever Spectre attacks an enemy who is alone. Reduces the enemy vision for <b>5</b> seconds.",
-=======
     "bkbpierce": "Yes",
-    "desc": "Deals bonus damage whenever Spectre attacks an enemy who is alone. Reduces the enemy vision for 5 seconds.",
->>>>>>> a73c27f395d3b40574b3a223e1cb285e53ebae1a
+    "desc": "Deals bonus damage whenever Spectre attacks an enemy who is alone. Reduces the enemy vision for <b>5</b> seconds.",
     "attrib": [
       {
         "key": "bonus_damage",
@@ -18258,7 +18229,7 @@
     ],
     "dmg_type": "Pure",
     "bkbpierce": "No",
-    "desc": "Captures the soul of a random enemy in an area, amplifies all damage they take. Units under the effect of Disruption can still be affected by Soul Catcher. If the unit dies under the effect of Soul Catcher, an illusions of that unit is created under your control until the enemy respawns.",
+    "desc": "Captures the soul of a random enemy in an area, amplifies all damage they take. Units under the effect of Disruption can still be affected by Soul Catcher.",
     "attrib": [
       {
         "key": "bonus_damage_taken",
@@ -18809,11 +18780,7 @@
   "treant_natures_guise": {
     "dname": "Nature's Guise",
     "behavior": "Passive",
-<<<<<<< HEAD
-    "desc": "Turns Treant invisible when he is within <b>265</b> radius of a tree for <b>NaN</b> seconds. Increases movement speed by <b>NaN</b> while invisible, and causes a <b>NaN</b> seconds disarming root when attacking out of invisibility.",
-=======
     "desc": "Turns Treant invisible after a short delay when he is within close radius of a tree. Increases movement speed while invisible, and causes a disarming root when attacking out of invisibility.",
->>>>>>> a73c27f395d3b40574b3a223e1cb285e53ebae1a
     "attrib": [
       {
         "key": "fade_time",
@@ -31302,11 +31269,7 @@
     ],
     "dmg_type": "Magical",
     "bkbpierce": "No",
-<<<<<<< HEAD
-    "desc": "Winter Wyvern soars upon an arctic wind, granting her unobstructed movement and allowing her to exhale a blistering chill into each attack. While soaring, her attacks travel further and faster, and slow enemies with a magical freeze that strips them of <b>9</b><b>%</b> of their current health each second. Her sight is also hardened against night's chill, granting her <b>400</b> additional vision range at night while soaring.\n\nUpgradable by Aghanim's Scepter.",
-=======
-    "desc": "Winter Wyvern soars upon an arctic wind, granting her unobstructed movement and allowing her to exhale a blistering chill into each attack. While soaring, her attacks travel further and faster, and slow enemies with a magical freeze that strips them of 6,7,8,9% of their current health each second. Her sight is also hardened against night's chill, granting her 400 additional vision range at night while soaring.\n\nUpgradable by Aghanim's Scepter.",
->>>>>>> a73c27f395d3b40574b3a223e1cb285e53ebae1a
+    "desc": "Winter Wyvern soars upon an arctic wind, granting her unobstructed movement and allowing her to exhale a blistering chill into each attack. While soaring, her attacks travel further and faster, and slow enemies with a magical freeze that strips them of <b>NaN</b><b>%</b> of their current health each second. Her sight is also hardened against night's chill, granting her <b>400</b> additional vision range at night while soaring.\n\nUpgradable by Aghanim's Scepter.",
     "attrib": [
       {
         "key": "duration",
