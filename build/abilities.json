@@ -10134,7 +10134,7 @@
     "behavior": "Passive",
     "dmg_type": "Magical",
     "bkbpierce": "No",
-    "desc": "Viper exudes an infectious toxin that damages and slows any enemy that damages it in a <b>1400</b> radius. The acid exudate also increases Viper's resistance to magic.",
+    "desc": "Viper exudes an infectious toxin that damages and slows the attack speed of any enemy that damages it in a <b>1400</b> radius. The acid exudate also increases Viper's resistance to magic.",
     "attrib": [
       {
         "key": "duration",

@@ -5156,7 +5156,7 @@
     "dname": "Aeon Disk",
     "qual": "epic",
     "cost": 3350,
-    "desc": "<h1>Passive: Combo Breaker</h1> When you take damage and your health falls below <b>70</b>%, a strong dispel is applied and you gain a <b>2.5</b> second buff that causes all damage you deal and are dealt to be reduced to zero. Only triggers on player based damage. \n\n<h1>Passive: Status Resistance</h1> Reduces status effect durations by <b>25</b>%.",
+    "desc": "<h1>Passive: Combo Breaker</h1> When you take damage and your health falls below <b>70</b>%, a strong dispel is applied and you gain a <b>2.5</b> second buff that causes all damage you deal and are dealt to be reduced to zero. Only triggers on player based damage.",
     "notes": "",
     "attrib": [
       {
@@ -5179,9 +5179,8 @@
       },
       {
         "key": "status_resistance",
-        "header": "STATUS RESISTANCE:",
-        "value": "25",
-        "generated": true
+        "header": "+Status Resistance",
+        "value": "25%"
       },
       {
         "key": "buff_duration",
