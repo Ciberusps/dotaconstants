@@ -3,7 +3,7 @@
     "abilities": [
       "antimage_mana_break",
       "antimage_blink",
-      "antimage_spell_shield",
+      "antimage_counterspell",
       "generic_hidden",
       "generic_hidden",
       "antimage_mana_void"
@@ -66,11 +66,11 @@
         "level": 2
       },
       {
-        "name": "special_bonus_movement_speed_40",
+        "name": "special_bonus_movement_speed_30",
         "level": 2
       },
       {
-        "name": "special_bonus_hp_regen_20",
+        "name": "special_bonus_hp_regen_25",
         "level": 3
       },
       {
@@ -99,7 +99,7 @@
     ],
     "talents": [
       {
-        "name": "special_bonus_armor_6",
+        "name": "special_bonus_armor_7",
         "level": 1
       },
       {
@@ -119,7 +119,7 @@
         "level": 3
       },
       {
-        "name": "special_bonus_movement_speed_75",
+        "name": "special_bonus_movement_speed_50",
         "level": 3
       },
       {
@@ -147,11 +147,11 @@
         "level": 1
       },
       {
-        "name": "special_bonus_armor_4",
+        "name": "special_bonus_armor_6",
         "level": 1
       },
       {
-        "name": "special_bonus_hp_300",
+        "name": "special_bonus_hp_275",
         "level": 2
       },
       {
@@ -199,7 +199,7 @@
         "level": 2
       },
       {
-        "name": "special_bonus_gold_income_20",
+        "name": "special_bonus_gold_income_25",
         "level": 2
       },
       {
@@ -239,15 +239,15 @@
         "level": 1
       },
       {
-        "name": "special_bonus_attack_speed_25",
+        "name": "special_bonus_agility_14",
         "level": 2
       },
       {
-        "name": "special_bonus_unique_drow_ranger_2",
+        "name": "special_bonus_unique_drow_ranger_5",
         "level": 2
       },
       {
-        "name": "special_bonus_unique_drow_ranger_3",
+        "name": "special_bonus_evasion_25",
         "level": 3
       },
       {
@@ -327,11 +327,11 @@
         "level": 1
       },
       {
-        "name": "special_bonus_unique_juggernaut",
+        "name": "special_bonus_unique_juggernaut_4",
         "level": 2
       },
       {
-        "name": "special_bonus_attack_speed_25",
+        "name": "special_bonus_attack_speed_20",
         "level": 2
       },
       {
@@ -363,7 +363,7 @@
     ],
     "talents": [
       {
-        "name": "special_bonus_attack_damage_20",
+        "name": "special_bonus_attack_damage_15",
         "level": 1
       },
       {
@@ -407,7 +407,7 @@
     ],
     "talents": [
       {
-        "name": "special_bonus_spell_amplify_10",
+        "name": "special_bonus_spell_amplify_8",
         "level": 1
       },
       {
@@ -419,11 +419,11 @@
         "level": 2
       },
       {
-        "name": "special_bonus_movement_speed_40",
+        "name": "special_bonus_movement_speed_30",
         "level": 2
       },
       {
-        "name": "special_bonus_evasion_20",
+        "name": "special_bonus_unique_nevermore_1",
         "level": 3
       },
       {
@@ -431,7 +431,7 @@
         "level": 3
       },
       {
-        "name": "special_bonus_unique_nevermore_1",
+        "name": "special_bonus_unique_nevermore_5",
         "level": 4
       },
       {
@@ -454,35 +454,35 @@
     "talents": [
       {
         "name": "special_bonus_agility_10",
-        "level": 3
+        "level": 1
       },
       {
         "name": "special_bonus_unique_morphling_1",
-        "level": 4
+        "level": 1
       },
       {
         "name": "special_bonus_unique_morphling_8",
-        "level": 4
+        "level": 2
       },
       {
         "name": "special_bonus_attack_speed_30",
-        "level": 5
+        "level": 2
       },
       {
-        "name": "special_bonus_unique_morphling_5",
-        "level": 5
+        "name": "special_bonus_cooldown_reduction_15",
+        "level": 3
       },
       {
         "name": "special_bonus_unique_morphling_4",
-        "level": 6
+        "level": 3
       },
       {
         "name": "special_bonus_unique_morphling_6",
-        "level": 6
+        "level": 4
       },
       {
         "name": "special_bonus_unique_morphling_3",
-        "level": 7
+        "level": 4
       }
     ]
   },
@@ -497,7 +497,7 @@
     ],
     "talents": [
       {
-        "name": "special_bonus_evasion_10",
+        "name": "special_bonus_evasion_20",
         "level": 1
       },
       {
@@ -505,7 +505,7 @@
         "level": 1
       },
       {
-        "name": "special_bonus_hp_250",
+        "name": "special_bonus_hp_275",
         "level": 2
       },
       {
@@ -541,19 +541,19 @@
     ],
     "talents": [
       {
-        "name": "special_bonus_intelligence_10",
+        "name": "special_bonus_all_stats_6",
         "level": 1
       },
       {
-        "name": "special_bonus_armor_5",
+        "name": "special_bonus_cast_range_150",
         "level": 1
       },
       {
-        "name": "special_bonus_spell_amplify_8",
+        "name": "special_bonus_spell_amplify_15",
         "level": 2
       },
       {
-        "name": "special_bonus_attack_damage_50",
+        "name": "special_bonus_attack_damage_90",
         "level": 2
       },
       {
@@ -585,7 +585,7 @@
     ],
     "talents": [
       {
-        "name": "special_bonus_armor_5",
+        "name": "special_bonus_exp_boost_30",
         "level": 1
       },
       {
@@ -597,7 +597,7 @@
         "level": 2
       },
       {
-        "name": "special_bonus_attack_damage_75",
+        "name": "special_bonus_unique_pudge_4",
         "level": 2
       },
       {
@@ -629,7 +629,7 @@
     ],
     "talents": [
       {
-        "name": "special_bonus_hp_200",
+        "name": "special_bonus_hp_225",
         "level": 1
       },
       {
@@ -673,7 +673,7 @@
     ],
     "talents": [
       {
-        "name": "special_bonus_movement_speed_30",
+        "name": "special_bonus_movement_speed_20",
         "level": 1
       },
       {
@@ -697,7 +697,7 @@
         "level": 3
       },
       {
-        "name": "special_bonus_hp_regen_35",
+        "name": "special_bonus_hp_regen_50",
         "level": 4
       },
       {
@@ -717,11 +717,11 @@
     ],
     "talents": [
       {
-        "name": "special_bonus_attack_damage_20",
+        "name": "special_bonus_unique_storm_spirit_6",
         "level": 1
       },
       {
-        "name": "special_bonus_mp_regen_175",
+        "name": "special_bonus_mp_regen_3",
         "level": 1
       },
       {
@@ -729,7 +729,7 @@
         "level": 2
       },
       {
-        "name": "special_bonus_hp_300",
+        "name": "special_bonus_hp_400",
         "level": 2
       },
       {
@@ -765,7 +765,7 @@
         "level": 1
       },
       {
-        "name": "special_bonus_mp_regen_2",
+        "name": "special_bonus_mp_regen_3",
         "level": 1
       },
       {
@@ -799,14 +799,14 @@
       "tiny_avalanche",
       "tiny_toss",
       "tiny_craggy_exterior",
-      "generic_hidden",
+      "tiny_tree_channel",
       "generic_hidden",
       "tiny_grow",
       "tiny_toss_tree"
     ],
     "talents": [
       {
-        "name": "special_bonus_magic_resistance_20",
+        "name": "special_bonus_movement_speed_20",
         "level": 1
       },
       {
@@ -814,7 +814,7 @@
         "level": 1
       },
       {
-        "name": "special_bonus_hp_350",
+        "name": "special_bonus_hp_400",
         "level": 2
       },
       {
@@ -894,11 +894,11 @@
     ],
     "talents": [
       {
-        "name": "special_bonus_mp_regen_175",
+        "name": "special_bonus_mp_regen_3",
         "level": 1
       },
       {
-        "name": "special_bonus_unique_windranger_2",
+        "name": "special_bonus_unique_windranger_9",
         "level": 1
       },
       {
@@ -906,7 +906,7 @@
         "level": 2
       },
       {
-        "name": "special_bonus_attack_range_100",
+        "name": "special_bonus_attack_range_125",
         "level": 2
       },
       {
@@ -918,7 +918,7 @@
         "level": 3
       },
       {
-        "name": "special_bonus_unique_windranger_4",
+        "name": "special_bonus_unique_windranger_8",
         "level": 4
       },
       {
@@ -938,7 +938,7 @@
     ],
     "talents": [
       {
-        "name": "special_bonus_armor_6",
+        "name": "special_bonus_mp_regen_3",
         "level": 1
       },
       {
@@ -946,7 +946,7 @@
         "level": 1
       },
       {
-        "name": "special_bonus_movement_speed_40",
+        "name": "special_bonus_movement_speed_30",
         "level": 2
       },
       {
@@ -991,7 +991,7 @@
         "level": 1
       },
       {
-        "name": "special_bonus_hp_regen_10",
+        "name": "special_bonus_hp_regen_12",
         "level": 2
       },
       {
@@ -1043,7 +1043,7 @@
         "level": 2
       },
       {
-        "name": "special_bonus_spell_amplify_12",
+        "name": "special_bonus_spell_amplify_14",
         "level": 3
       },
       {
@@ -1063,19 +1063,19 @@
   "npc_dota_hero_lich": {
     "abilities": [
       "lich_frost_nova",
-      "lich_frost_armor",
-      "lich_dark_ritual",
+      "lich_frost_shield",
+      "lich_sinister_gaze",
       "generic_hidden",
       "generic_hidden",
       "lich_chain_frost"
     ],
     "talents": [
       {
-        "name": "special_bonus_hp_175",
+        "name": "special_bonus_hp_200",
         "level": 1
       },
       {
-        "name": "special_bonus_movement_speed_25",
+        "name": "special_bonus_movement_speed_20",
         "level": 1
       },
       {
@@ -1087,11 +1087,11 @@
         "level": 2
       },
       {
-        "name": "special_bonus_cast_range_175",
+        "name": "special_bonus_cast_range_200",
         "level": 3
       },
       {
-        "name": "special_bonus_gold_income_20",
+        "name": "special_bonus_unique_lich_4",
         "level": 3
       },
       {
@@ -1115,7 +1115,7 @@
     ],
     "talents": [
       {
-        "name": "special_bonus_cast_range_75",
+        "name": "special_bonus_cast_range_100",
         "level": 1
       },
       {
@@ -1127,7 +1127,7 @@
         "level": 2
       },
       {
-        "name": "special_bonus_gold_income_20",
+        "name": "special_bonus_gold_income_25",
         "level": 2
       },
       {
@@ -1203,7 +1203,7 @@
     ],
     "talents": [
       {
-        "name": "special_bonus_hp_regen_5",
+        "name": "special_bonus_hp_regen_8",
         "level": 1
       },
       {
@@ -1211,7 +1211,7 @@
         "level": 1
       },
       {
-        "name": "special_bonus_hp_300",
+        "name": "special_bonus_hp_350",
         "level": 2
       },
       {
@@ -1219,7 +1219,7 @@
         "level": 2
       },
       {
-        "name": "special_bonus_attack_speed_50",
+        "name": "special_bonus_lifesteal_30",
         "level": 3
       },
       {
@@ -1227,7 +1227,7 @@
         "level": 3
       },
       {
-        "name": "special_bonus_unique_slardar",
+        "name": "special_bonus_unique_slardar_4",
         "level": 4
       },
       {
@@ -1247,7 +1247,7 @@
     ],
     "talents": [
       {
-        "name": "special_bonus_movement_speed_25",
+        "name": "special_bonus_movement_speed_20",
         "level": 1
       },
       {
@@ -1295,7 +1295,7 @@
         "level": 1
       },
       {
-        "name": "special_bonus_armor_5",
+        "name": "special_bonus_armor_6",
         "level": 1
       },
       {
@@ -1335,7 +1335,7 @@
     ],
     "talents": [
       {
-        "name": "special_bonus_hp_regen_5",
+        "name": "special_bonus_hp_regen_6",
         "level": 1
       },
       {
@@ -1391,11 +1391,11 @@
         "level": 2
       },
       {
-        "name": "special_bonus_gold_income_20",
+        "name": "special_bonus_gold_income_25",
         "level": 2
       },
       {
-        "name": "special_bonus_hp_400",
+        "name": "special_bonus_hp_500",
         "level": 3
       },
       {
@@ -1423,19 +1423,19 @@
     ],
     "talents": [
       {
-        "name": "special_bonus_spell_amplify_6",
+        "name": "special_bonus_spell_amplify_8",
         "level": 1
       },
       {
-        "name": "special_bonus_cast_range_75",
+        "name": "special_bonus_cast_range_100",
         "level": 1
       },
       {
-        "name": "special_bonus_movement_speed_40",
+        "name": "special_bonus_gold_income_25",
         "level": 2
       },
       {
-        "name": "special_bonus_spell_lifesteal_10",
+        "name": "special_bonus_spell_lifesteal_15",
         "level": 2
       },
       {
@@ -1467,7 +1467,7 @@
     ],
     "talents": [
       {
-        "name": "special_bonus_cooldown_reduction_15",
+        "name": "special_bonus_cooldown_reduction_25",
         "level": 1
       },
       {
@@ -1479,7 +1479,7 @@
         "level": 2
       },
       {
-        "name": "special_bonus_unique_sniper_1",
+        "name": "special_bonus_unique_sniper_5",
         "level": 2
       },
       {
@@ -1511,7 +1511,7 @@
     ],
     "talents": [
       {
-        "name": "special_bonus_attack_damage_40",
+        "name": "special_bonus_attack_damage_30",
         "level": 1
       },
       {
@@ -1531,7 +1531,7 @@
         "level": 3
       },
       {
-        "name": "special_bonus_attack_speed_80",
+        "name": "special_bonus_attack_speed_70",
         "level": 3
       },
       {
@@ -1591,9 +1591,9 @@
   "npc_dota_hero_beastmaster": {
     "abilities": [
       "beastmaster_wild_axes",
-      "beastmaster_call_of_the_wild",
+      "beastmaster_call_of_the_wild_boar",
+      "beastmaster_call_of_the_wild_hawk",
       "beastmaster_inner_beast",
-      "generic_hidden",
       "generic_hidden",
       "beastmaster_primal_roar"
     ],
@@ -1603,11 +1603,11 @@
         "level": 1
       },
       {
-        "name": "special_bonus_movement_speed_30",
+        "name": "special_bonus_movement_speed_20",
         "level": 1
       },
       {
-        "name": "special_bonus_armor_7",
+        "name": "special_bonus_armor_6",
         "level": 2
       },
       {
@@ -1671,7 +1671,7 @@
         "level": 4
       },
       {
-        "name": "special_bonus_spell_block_20",
+        "name": "special_bonus_spell_block_15",
         "level": 4
       }
     ]
@@ -1695,7 +1695,7 @@
         "level": 1
       },
       {
-        "name": "special_bonus_cast_range_200",
+        "name": "special_bonus_unique_venomancer_5",
         "level": 2
       },
       {
@@ -1707,7 +1707,7 @@
         "level": 3
       },
       {
-        "name": "special_bonus_unique_venomancer_5",
+        "name": "special_bonus_spell_lifesteal_15",
         "level": 3
       },
       {
@@ -1731,11 +1731,11 @@
     ],
     "talents": [
       {
-        "name": "special_bonus_attack_damage_20",
+        "name": "special_bonus_attack_damage_15",
         "level": 1
       },
       {
-        "name": "special_bonus_strength_8",
+        "name": "special_bonus_strength_12",
         "level": 1
       },
       {
@@ -1743,11 +1743,11 @@
         "level": 2
       },
       {
-        "name": "special_bonus_hp_300",
+        "name": "special_bonus_unique_faceless_void_5",
         "level": 2
       },
       {
-        "name": "special_bonus_attack_speed_40",
+        "name": "special_bonus_attack_speed_45",
         "level": 3
       },
       {
@@ -1775,7 +1775,7 @@
     ],
     "talents": [
       {
-        "name": "special_bonus_unique_wraith_king_3",
+        "name": "special_bonus_unique_wraith_king_7",
         "level": 1
       },
       {
@@ -1819,11 +1819,11 @@
     ],
     "talents": [
       {
-        "name": "special_bonus_attack_damage_50",
+        "name": "special_bonus_attack_damage_40",
         "level": 1
       },
       {
-        "name": "special_bonus_magic_resistance_12",
+        "name": "special_bonus_magic_resistance_15",
         "level": 1
       },
       {
@@ -1831,7 +1831,7 @@
         "level": 2
       },
       {
-        "name": "special_bonus_cast_range_150",
+        "name": "special_bonus_cast_range_175",
         "level": 2
       },
       {
@@ -1863,7 +1863,7 @@
     ],
     "talents": [
       {
-        "name": "special_bonus_hp_150",
+        "name": "special_bonus_hp_200",
         "level": 1
       },
       {
@@ -1871,19 +1871,19 @@
         "level": 1
       },
       {
+        "name": "special_bonus_lifesteal_15",
+        "level": 2
+      },
+      {
+        "name": "special_bonus_cleave_25",
+        "level": 2
+      },
+      {
         "name": "special_bonus_corruption_4",
-        "level": 2
-      },
-      {
-        "name": "special_bonus_cleave_20",
-        "level": 2
-      },
-      {
-        "name": "special_bonus_lifesteal_20",
         "level": 3
       },
       {
-        "name": "special_bonus_unique_phantom_assassin",
+        "name": "special_bonus_unique_phantom_assassin_3",
         "level": 3
       },
       {
@@ -1891,7 +1891,7 @@
         "level": 4
       },
       {
-        "name": "special_bonus_unique_phantom_assassin_3",
+        "name": "special_bonus_unique_phantom_assassin",
         "level": 4
       }
     ]
@@ -1907,7 +1907,7 @@
     ],
     "talents": [
       {
-        "name": "special_bonus_movement_speed_25",
+        "name": "special_bonus_movement_speed_20",
         "level": 1
       },
       {
@@ -1946,7 +1946,7 @@
       "templar_assassin_meld",
       "templar_assassin_psi_blades",
       "templar_assassin_trap",
-      "generic_hidden",
+      "templar_assassin_trap_teleport",
       "templar_assassin_psionic_trap"
     ],
     "talents": [
@@ -1955,11 +1955,11 @@
         "level": 1
       },
       {
-        "name": "special_bonus_unique_templar_assassin_6",
+        "name": "special_bonus_evasion_15",
         "level": 1
       },
       {
-        "name": "special_bonus_armor_7",
+        "name": "special_bonus_movement_speed_25",
         "level": 2
       },
       {
@@ -1975,7 +1975,7 @@
         "level": 3
       },
       {
-        "name": "special_bonus_unique_templar_assassin_5",
+        "name": "special_bonus_unique_templar_assassin_7",
         "level": 4
       },
       {
@@ -1995,7 +1995,7 @@
     ],
     "talents": [
       {
-        "name": "special_bonus_attack_speed_20",
+        "name": "special_bonus_attack_speed_25",
         "level": 1
       },
       {
@@ -2003,7 +2003,7 @@
         "level": 1
       },
       {
-        "name": "special_bonus_attack_range_100",
+        "name": "special_bonus_attack_range_125",
         "level": 2
       },
       {
@@ -2043,7 +2043,7 @@
         "level": 1
       },
       {
-        "name": "special_bonus_cast_range_200",
+        "name": "special_bonus_cast_range_400",
         "level": 1
       },
       {
@@ -2051,7 +2051,7 @@
         "level": 2
       },
       {
-        "name": "special_bonus_unique_luna_3",
+        "name": "special_bonus_movement_speed_30",
         "level": 2
       },
       {
@@ -2063,7 +2063,7 @@
         "level": 3
       },
       {
-        "name": "special_bonus_lifesteal_25",
+        "name": "special_bonus_lifesteal_35",
         "level": 4
       },
       {
@@ -2083,7 +2083,7 @@
     ],
     "talents": [
       {
-        "name": "special_bonus_mp_regen_2",
+        "name": "special_bonus_mp_regen_3",
         "level": 1
       },
       {
@@ -2091,23 +2091,23 @@
         "level": 1
       },
       {
-        "name": "special_bonus_attack_damage_35",
+        "name": "special_bonus_attack_damage_30",
         "level": 2
       },
       {
-        "name": "special_bonus_hp_300",
+        "name": "special_bonus_hp_400",
         "level": 2
       },
       {
-        "name": "special_bonus_gold_income_25",
+        "name": "special_bonus_gold_income_30",
+        "level": 3
+      },
+      {
+        "name": "special_bonus_strength_25",
         "level": 3
       },
       {
         "name": "special_bonus_unique_dragon_knight",
-        "level": 3
-      },
-      {
-        "name": "special_bonus_strength_40",
         "level": 4
       },
       {
@@ -2123,7 +2123,7 @@
       "dazzle_shadow_wave",
       "generic_hidden",
       "generic_hidden",
-      "dazzle_weave"
+      "dazzle_bad_juju"
     ],
     "talents": [
       {
@@ -2131,11 +2131,11 @@
         "level": 1
       },
       {
-        "name": "special_bonus_hp_200",
+        "name": "special_bonus_exp_boost_30",
         "level": 1
       },
       {
-        "name": "special_bonus_cast_range_125",
+        "name": "special_bonus_cast_range_200",
         "level": 2
       },
       {
@@ -2143,7 +2143,7 @@
         "level": 2
       },
       {
-        "name": "special_bonus_movement_speed_50",
+        "name": "special_bonus_movement_speed_40",
         "level": 3
       },
       {
@@ -2175,7 +2175,7 @@
         "level": 1
       },
       {
-        "name": "special_bonus_movement_speed_25",
+        "name": "special_bonus_movement_speed_20",
         "level": 1
       },
       {
@@ -2187,7 +2187,7 @@
         "level": 2
       },
       {
-        "name": "special_bonus_magic_resistance_20",
+        "name": "special_bonus_unique_clockwerk_4",
         "level": 3
       },
       {
@@ -2195,7 +2195,7 @@
         "level": 3
       },
       {
-        "name": "special_bonus_unique_clockwerk_4",
+        "name": "special_bonus_magic_resistance_50",
         "level": 4
       },
       {
@@ -2227,7 +2227,7 @@
         "level": 2
       },
       {
-        "name": "special_bonus_movement_speed_40",
+        "name": "special_bonus_movement_speed_30",
         "level": 2
       },
       {
@@ -2263,7 +2263,7 @@
         "level": 1
       },
       {
-        "name": "special_bonus_movement_speed_40",
+        "name": "special_bonus_movement_speed_25",
         "level": 1
       },
       {
@@ -2279,7 +2279,7 @@
         "level": 3
       },
       {
-        "name": "special_bonus_unique_furion_4",
+        "name": "special_bonus_cooldown_reduction_25",
         "level": 3
       },
       {
@@ -2318,7 +2318,7 @@
         "level": 2
       },
       {
-        "name": "special_bonus_movement_speed_35",
+        "name": "special_bonus_movement_speed_25",
         "level": 2
       },
       {
@@ -2366,11 +2366,11 @@
         "level": 2
       },
       {
-        "name": "special_bonus_cooldown_reduction_15",
+        "name": "special_bonus_armor_10",
         "level": 3
       },
       {
-        "name": "special_bonus_unique_dark_seer_3",
+        "name": "special_bonus_unique_dark_seer",
         "level": 3
       },
       {
@@ -2378,7 +2378,7 @@
         "level": 4
       },
       {
-        "name": "special_bonus_unique_dark_seer",
+        "name": "special_bonus_unique_dark_seer_3",
         "level": 4
       }
     ]
@@ -2390,19 +2390,19 @@
       "clinkz_wind_walk",
       "generic_hidden",
       "generic_hidden",
-      "clinkz_death_pact"
+      "clinkz_burning_army"
     ],
     "talents": [
       {
-        "name": "special_bonus_magic_resistance_12",
+        "name": "special_bonus_agility_8",
         "level": 1
       },
       {
-        "name": "special_bonus_armor_5",
+        "name": "special_bonus_strength_10",
         "level": 1
       },
       {
-        "name": "special_bonus_evasion_20",
+        "name": "special_bonus_unique_clinkz_5",
         "level": 2
       },
       {
@@ -2410,11 +2410,11 @@
         "level": 2
       },
       {
-        "name": "special_bonus_attack_range_100",
+        "name": "special_bonus_attack_range_125",
         "level": 3
       },
       {
-        "name": "special_bonus_hp_regen_20",
+        "name": "special_bonus_hp_regen_16",
         "level": 3
       },
       {
@@ -2458,7 +2458,7 @@
         "level": 3
       },
       {
-        "name": "special_bonus_mp_regen_3",
+        "name": "special_bonus_mp_regen_5",
         "level": 3
       },
       {
@@ -2486,7 +2486,7 @@
         "level": 1
       },
       {
-        "name": "special_bonus_movement_speed_25",
+        "name": "special_bonus_movement_speed_20",
         "level": 1
       },
       {
@@ -2517,7 +2517,7 @@
   },
   "npc_dota_hero_huskar": {
     "abilities": [
-      "huskar_inner_vitality",
+      "huskar_inner_fire",
       "huskar_burning_spear",
       "huskar_berserkers_blood",
       "generic_hidden",
@@ -2526,11 +2526,11 @@
     ],
     "talents": [
       {
-        "name": "special_bonus_hp_175",
+        "name": "special_bonus_hp_225",
         "level": 1
       },
       {
-        "name": "special_bonus_attack_damage_20",
+        "name": "special_bonus_attack_damage_15",
         "level": 1
       },
       {
@@ -2538,11 +2538,11 @@
         "level": 2
       },
       {
-        "name": "special_bonus_lifesteal_15",
+        "name": "special_bonus_lifesteal_20",
         "level": 2
       },
       {
-        "name": "special_bonus_strength_15",
+        "name": "special_bonus_strength_20",
         "level": 3
       },
       {
@@ -2550,11 +2550,11 @@
         "level": 3
       },
       {
-        "name": "special_bonus_attack_range_125",
+        "name": "special_bonus_attack_range_175",
         "level": 4
       },
       {
-        "name": "special_bonus_unique_huskar_3",
+        "name": "special_bonus_unique_huskar_5",
         "level": 4
       }
     ]
@@ -2582,11 +2582,11 @@
         "level": 2
       },
       {
-        "name": "special_bonus_cast_range_150",
+        "name": "special_bonus_lifesteal_15",
         "level": 2
       },
       {
-        "name": "special_bonus_movement_speed_50",
+        "name": "special_bonus_movement_speed_40",
         "level": 3
       },
       {
@@ -2626,7 +2626,7 @@
         "level": 2
       },
       {
-        "name": "special_bonus_exp_boost_35",
+        "name": "special_bonus_agility_20",
         "level": 2
       },
       {
@@ -2658,7 +2658,7 @@
     ],
     "talents": [
       {
-        "name": "special_bonus_movement_speed_30",
+        "name": "special_bonus_movement_speed_20",
         "level": 1
       },
       {
@@ -2702,7 +2702,7 @@
     ],
     "talents": [
       {
-        "name": "special_bonus_mana_break_20",
+        "name": "special_bonus_unique_weaver_1",
         "level": 1
       },
       {
@@ -2710,11 +2710,11 @@
         "level": 1
       },
       {
-        "name": "special_bonus_strength_12",
+        "name": "special_bonus_mana_break_20",
         "level": 2
       },
       {
-        "name": "special_bonus_unique_weaver_1",
+        "name": "special_bonus_strength_14",
         "level": 2
       },
       {
@@ -2746,7 +2746,7 @@
     ],
     "talents": [
       {
-        "name": "special_bonus_exp_boost_30",
+        "name": "special_bonus_attack_range_300",
         "level": 1
       },
       {
@@ -2754,7 +2754,7 @@
         "level": 1
       },
       {
-        "name": "special_bonus_attack_range_300",
+        "name": "special_bonus_exp_boost_40",
         "level": 2
       },
       {
@@ -2810,7 +2810,7 @@
         "level": 3
       },
       {
-        "name": "special_bonus_movement_speed_50",
+        "name": "special_bonus_movement_speed_40",
         "level": 3
       },
       {
@@ -2826,15 +2826,15 @@
   "npc_dota_hero_chen": {
     "abilities": [
       "chen_penitence",
-      "chen_test_of_faith",
       "chen_holy_persuasion",
+      "chen_divine_favor",
       "generic_hidden",
       "generic_hidden",
       "chen_hand_of_god"
     ],
     "talents": [
       {
-        "name": "special_bonus_exp_boost_35",
+        "name": "special_bonus_exp_boost_30",
         "level": 1
       },
       {
@@ -2842,11 +2842,11 @@
         "level": 1
       },
       {
-        "name": "special_bonus_armor_7",
+        "name": "special_bonus_unique_chen_6",
         "level": 2
       },
       {
-        "name": "special_bonus_unique_chen_3",
+        "name": "special_bonus_unique_chen_5",
         "level": 2
       },
       {
@@ -2873,20 +2873,20 @@
       "spectre_desolate",
       "spectre_dispersion",
       "spectre_reality",
-      "generic_hidden",
+      "spectre_haunt_single",
       "spectre_haunt"
     ],
     "talents": [
       {
-        "name": "special_bonus_hp_regen_5",
+        "name": "special_bonus_hp_regen_6",
+        "level": 1
+      },
+      {
+        "name": "special_bonus_all_stats_5",
         "level": 1
       },
       {
         "name": "special_bonus_unique_spectre_2",
-        "level": 1
-      },
-      {
-        "name": "special_bonus_all_stats_8",
         "level": 2
       },
       {
@@ -2950,7 +2950,7 @@
         "level": 4
       },
       {
-        "name": "special_bonus_cleave_100",
+        "name": "special_bonus_cleave_175",
         "level": 4
       }
     ]
@@ -2967,7 +2967,7 @@
     ],
     "talents": [
       {
-        "name": "special_bonus_gold_income_10",
+        "name": "special_bonus_gold_income_15",
         "level": 1
       },
       {
@@ -3011,7 +3011,7 @@
     ],
     "talents": [
       {
-        "name": "special_bonus_mp_regen_175",
+        "name": "special_bonus_mp_regen_3",
         "level": 1
       },
       {
@@ -3019,11 +3019,11 @@
         "level": 1
       },
       {
-        "name": "special_bonus_agility_16",
+        "name": "special_bonus_agility_14",
         "level": 2
       },
       {
-        "name": "special_bonus_unique_ursa_2",
+        "name": "special_bonus_unique_ursa_4",
         "level": 2
       },
       {
@@ -3031,7 +3031,7 @@
         "level": 3
       },
       {
-        "name": "special_bonus_unique_ursa_4",
+        "name": "special_bonus_unique_ursa",
         "level": 3
       },
       {
@@ -3039,7 +3039,7 @@
         "level": 4
       },
       {
-        "name": "special_bonus_unique_ursa",
+        "name": "special_bonus_unique_ursa_6",
         "level": 4
       }
     ]
@@ -3047,7 +3047,7 @@
   "npc_dota_hero_spirit_breaker": {
     "abilities": [
       "spirit_breaker_charge_of_darkness",
-      "spirit_breaker_empowering_haste",
+      "spirit_breaker_bulldoze",
       "spirit_breaker_greater_bash",
       "generic_hidden",
       "generic_hidden",
@@ -3055,7 +3055,7 @@
     ],
     "talents": [
       {
-        "name": "special_bonus_night_vision_400",
+        "name": "special_bonus_night_vision_600",
         "level": 1
       },
       {
@@ -3063,7 +3063,7 @@
         "level": 1
       },
       {
-        "name": "special_bonus_hp_regen_10",
+        "name": "special_bonus_hp_regen_12",
         "level": 2
       },
       {
@@ -3099,15 +3099,15 @@
     ],
     "talents": [
       {
-        "name": "special_bonus_attack_damage_25",
+        "name": "special_bonus_attack_damage_20",
         "level": 1
       },
       {
-        "name": "special_bonus_hp_200",
+        "name": "special_bonus_hp_250",
         "level": 1
       },
       {
-        "name": "special_bonus_unique_gyrocopter_2",
+        "name": "special_bonus_unique_gyrocopter_6",
         "level": 2
       },
       {
@@ -3115,7 +3115,7 @@
         "level": 2
       },
       {
-        "name": "special_bonus_movement_speed_50",
+        "name": "special_bonus_movement_speed_40",
         "level": 3
       },
       {
@@ -3160,7 +3160,7 @@
         "level": 2
       },
       {
-        "name": "special_bonus_cleave_30",
+        "name": "special_bonus_cleave_40",
         "level": 3
       },
       {
@@ -3219,7 +3219,7 @@
         "level": 4
       },
       {
-        "name": "special_bonus_unique_invoker_8",
+        "name": "special_bonus_unique_invoker_10",
         "level": 4
       },
       {
@@ -3231,7 +3231,7 @@
         "level": 5
       },
       {
-        "name": "special_bonus_unique_invoker_7",
+        "name": "special_bonus_unique_invoker_9",
         "level": 6
       },
       {
@@ -3263,7 +3263,7 @@
     ],
     "talents": [
       {
-        "name": "special_bonus_armor_5",
+        "name": "special_bonus_armor_6",
         "level": 1
       },
       {
@@ -3271,7 +3271,7 @@
         "level": 1
       },
       {
-        "name": "special_bonus_gold_income_15",
+        "name": "special_bonus_gold_income_20",
         "level": 2
       },
       {
@@ -3300,7 +3300,7 @@
     "abilities": [
       "obsidian_destroyer_arcane_orb",
       "obsidian_destroyer_astral_imprisonment",
-      "obsidian_destroyer_essence_aura",
+      "obsidian_destroyer_equilibrium",
       "generic_hidden",
       "generic_hidden",
       "obsidian_destroyer_sanity_eclipse"
@@ -3315,11 +3315,11 @@
         "level": 1
       },
       {
-        "name": "special_bonus_movement_speed_40",
+        "name": "special_bonus_mp_350",
         "level": 2
       },
       {
-        "name": "special_bonus_unique_outworld_devourer_2",
+        "name": "special_bonus_armor_6",
         "level": 2
       },
       {
@@ -3327,7 +3327,7 @@
         "level": 3
       },
       {
-        "name": "special_bonus_unique_outworld_devourer_3",
+        "name": "special_bonus_unique_outworld_devourer_4",
         "level": 3
       },
       {
@@ -3387,7 +3387,7 @@
   "npc_dota_hero_brewmaster": {
     "abilities": [
       "brewmaster_thunder_clap",
-      "brewmaster_drunken_haze",
+      "brewmaster_cinder_brew",
       "brewmaster_drunken_brawler",
       "generic_hidden",
       "generic_hidden",
@@ -3395,7 +3395,7 @@
     ],
     "talents": [
       {
-        "name": "special_bonus_attack_damage_30",
+        "name": "special_bonus_attack_damage_15",
         "level": 1
       },
       {
@@ -3447,7 +3447,7 @@
         "level": 1
       },
       {
-        "name": "special_bonus_movement_speed_40",
+        "name": "special_bonus_movement_speed_30",
         "level": 2
       },
       {
@@ -3475,7 +3475,7 @@
   "npc_dota_hero_lone_druid": {
     "abilities": [
       "lone_druid_spirit_bear",
-      "lone_druid_rabid",
+      "lone_druid_spirit_link",
       "lone_druid_savage_roar",
       "lone_druid_true_form_battle_cry",
       "generic_hidden",
@@ -3488,7 +3488,7 @@
         "level": 1
       },
       {
-        "name": "special_bonus_attack_range_175",
+        "name": "special_bonus_attack_range_125",
         "level": 1
       },
       {
@@ -3504,11 +3504,11 @@
         "level": 3
       },
       {
-        "name": "special_bonus_unique_lone_druid_6",
+        "name": "special_bonus_unique_lone_druid_9",
         "level": 3
       },
       {
-        "name": "special_bonus_unique_lone_druid_9",
+        "name": "special_bonus_unique_lone_druid_10",
         "level": 4
       },
       {
@@ -3565,22 +3565,22 @@
     "abilities": [
       "meepo_earthbind",
       "meepo_poof",
-      "meepo_geostrike",
+      "meepo_ransack",
       "generic_hidden",
       "generic_hidden",
       "meepo_divided_we_stand"
     ],
     "talents": [
       {
-        "name": "special_bonus_strength_7",
+        "name": "special_bonus_strength_10",
         "level": 1
       },
       {
-        "name": "special_bonus_attack_damage_20",
+        "name": "special_bonus_attack_damage_15",
         "level": 1
       },
       {
-        "name": "special_bonus_lifesteal_10",
+        "name": "special_bonus_evasion_20",
         "level": 2
       },
       {
@@ -3592,11 +3592,11 @@
         "level": 3
       },
       {
-        "name": "special_bonus_evasion_15",
+        "name": "special_bonus_lifesteal_10",
         "level": 3
       },
       {
-        "name": "special_bonus_hp_600",
+        "name": "special_bonus_hp_400",
         "level": 4
       },
       {
@@ -3660,7 +3660,7 @@
     ],
     "talents": [
       {
-        "name": "special_bonus_gold_income_10",
+        "name": "special_bonus_gold_income_15",
         "level": 1
       },
       {
@@ -3668,11 +3668,11 @@
         "level": 1
       },
       {
-        "name": "special_bonus_attack_damage_90",
+        "name": "special_bonus_attack_damage_100",
         "level": 2
       },
       {
-        "name": "special_bonus_hp_300",
+        "name": "special_bonus_hp_350",
         "level": 2
       },
       {
@@ -3684,7 +3684,7 @@
         "level": 3
       },
       {
-        "name": "special_bonus_movement_speed_90",
+        "name": "special_bonus_movement_speed_75",
         "level": 4
       },
       {
@@ -3712,7 +3712,7 @@
         "level": 1
       },
       {
-        "name": "special_bonus_unique_undying_3",
+        "name": "special_bonus_unique_undying",
         "level": 2
       },
       {
@@ -3720,7 +3720,7 @@
         "level": 2
       },
       {
-        "name": "special_bonus_unique_undying",
+        "name": "special_bonus_unique_undying_3",
         "level": 3
       },
       {
@@ -3728,7 +3728,7 @@
         "level": 3
       },
       {
-        "name": "special_bonus_reincarnation_200",
+        "name": "special_bonus_reincarnation_250",
         "level": 4
       },
       {
@@ -3741,7 +3741,7 @@
     "abilities": [
       "rubick_telekinesis",
       "rubick_fade_bolt",
-      "rubick_null_field",
+      "rubick_arcane_supremacy",
       "rubick_empty1",
       "rubick_empty2",
       "rubick_spell_steal",
@@ -3763,7 +3763,7 @@
         "level": 2
       },
       {
-        "name": "special_bonus_cast_range_100",
+        "name": "special_bonus_cast_range_125",
         "level": 2
       },
       {
@@ -3844,11 +3844,11 @@
     ],
     "talents": [
       {
-        "name": "special_bonus_spell_amplify_6",
+        "name": "special_bonus_spell_amplify_8",
         "level": 1
       },
       {
-        "name": "special_bonus_gold_income_10",
+        "name": "special_bonus_gold_income_15",
         "level": 1
       },
       {
@@ -3856,7 +3856,7 @@
         "level": 2
       },
       {
-        "name": "special_bonus_movement_speed_35",
+        "name": "special_bonus_movement_speed_25",
         "level": 2
       },
       {
@@ -3889,7 +3889,7 @@
     ],
     "talents": [
       {
-        "name": "special_bonus_movement_speed_25",
+        "name": "special_bonus_movement_speed_20",
         "level": 1
       },
       {
@@ -3897,7 +3897,7 @@
         "level": 1
       },
       {
-        "name": "special_bonus_agility_15",
+        "name": "special_bonus_agility_12",
         "level": 2
       },
       {
@@ -3925,18 +3925,18 @@
   "npc_dota_hero_keeper_of_the_light": {
     "abilities": [
       "keeper_of_the_light_illuminate",
-      "keeper_of_the_light_mana_leak",
-      "keeper_of_the_light_chakra_magic",
-      "keeper_of_the_light_recall",
       "keeper_of_the_light_blinding_light",
-      "keeper_of_the_light_spirit_form",
+      "keeper_of_the_light_chakra_magic",
+      "generic_hidden",
+      "generic_hidden",
+      "keeper_of_the_light_will_o_wisp",
       "keeper_of_the_light_illuminate_end",
       "keeper_of_the_light_spirit_form_illuminate",
       "keeper_of_the_light_spirit_form_illuminate_end"
     ],
     "talents": [
       {
-        "name": "special_bonus_spell_lifesteal_8",
+        "name": "special_bonus_exp_boost_30",
         "level": 1
       },
       {
@@ -3944,7 +3944,7 @@
         "level": 1
       },
       {
-        "name": "special_bonus_exp_boost_40",
+        "name": "special_bonus_unique_keeper_of_the_light_4",
         "level": 2
       },
       {
@@ -3974,18 +3974,19 @@
       "wisp_tether",
       "wisp_spirits",
       "wisp_overcharge",
-      "wisp_spirits_in",
-      "wisp_spirits_out",
+      "generic_hidden",
+      "generic_hidden",
       "wisp_relocate",
-      "wisp_tether_break"
+      "wisp_tether_break",
+      "wisp_spirits_in"
     ],
     "talents": [
       {
-        "name": "special_bonus_unique_wisp_3",
+        "name": "special_bonus_unique_wisp_7",
         "level": 1
       },
       {
-        "name": "special_bonus_attack_damage_60",
+        "name": "special_bonus_attack_damage_45",
         "level": 1
       },
       {
@@ -3993,7 +3994,7 @@
         "level": 2
       },
       {
-        "name": "special_bonus_unique_wisp_5",
+        "name": "special_bonus_hp_regen_8",
         "level": 2
       },
       {
@@ -4001,15 +4002,15 @@
         "level": 3
       },
       {
-        "name": "special_bonus_unique_wisp_4",
+        "name": "special_bonus_armor_15",
         "level": 3
       },
       {
-        "name": "special_bonus_unique_wisp_2",
+        "name": "special_bonus_unique_wisp_6",
         "level": 4
       },
       {
-        "name": "special_bonus_hp_regen_50",
+        "name": "special_bonus_unique_wisp_4",
         "level": 4
       }
     ]
@@ -4025,7 +4026,7 @@
     ],
     "talents": [
       {
-        "name": "special_bonus_cast_range_125",
+        "name": "special_bonus_cast_range_100",
         "level": 1
       },
       {
@@ -4073,7 +4074,7 @@
         "level": 1
       },
       {
-        "name": "special_bonus_agility_10",
+        "name": "special_bonus_agility_6",
         "level": 1
       },
       {
@@ -4113,7 +4114,7 @@
     ],
     "talents": [
       {
-        "name": "special_bonus_attack_damage_20",
+        "name": "special_bonus_attack_damage_15",
         "level": 1
       },
       {
@@ -4129,7 +4130,7 @@
         "level": 2
       },
       {
-        "name": "special_bonus_mp_700",
+        "name": "special_bonus_unique_medusa_5",
         "level": 3
       },
       {
@@ -4137,7 +4138,7 @@
         "level": 3
       },
       {
-        "name": "special_bonus_unique_medusa_2",
+        "name": "special_bonus_mp_1000",
         "level": 4
       },
       {
@@ -4173,11 +4174,11 @@
         "level": 2
       },
       {
-        "name": "special_bonus_evasion_20",
+        "name": "special_bonus_evasion_25",
         "level": 3
       },
       {
-        "name": "special_bonus_attack_damage_50",
+        "name": "special_bonus_attack_damage_40",
         "level": 3
       },
       {
@@ -4205,19 +4206,19 @@
         "level": 1
       },
       {
-        "name": "special_bonus_magic_resistance_10",
+        "name": "special_bonus_movement_speed_20",
         "level": 1
       },
       {
-        "name": "special_bonus_attack_damage_75",
-        "level": 2
-      },
-      {
-        "name": "special_bonus_unique_centaur_3",
+        "name": "special_bonus_attack_base_damage_30",
         "level": 2
       },
       {
         "name": "special_bonus_unique_centaur_4",
+        "level": 2
+      },
+      {
+        "name": "special_bonus_unique_centaur_3",
         "level": 3
       },
       {
@@ -4253,7 +4254,7 @@
         "level": 1
       },
       {
-        "name": "special_bonus_strength_15",
+        "name": "special_bonus_strength_12",
         "level": 2
       },
       {
@@ -4261,7 +4262,7 @@
         "level": 2
       },
       {
-        "name": "special_bonus_armor_12",
+        "name": "special_bonus_armor_10",
         "level": 3
       },
       {
@@ -4291,15 +4292,15 @@
     ],
     "talents": [
       {
-        "name": "special_bonus_spell_amplify_6",
+        "name": "special_bonus_hp_225",
         "level": 1
       },
       {
-        "name": "special_bonus_exp_boost_25",
+        "name": "special_bonus_mp_regen_250",
         "level": 1
       },
       {
-        "name": "special_bonus_attack_damage_100",
+        "name": "special_bonus_spell_amplify_10",
         "level": 2
       },
       {
@@ -4307,11 +4308,11 @@
         "level": 2
       },
       {
-        "name": "special_bonus_strength_15",
+        "name": "special_bonus_strength_20",
         "level": 3
       },
       {
-        "name": "special_bonus_cooldown_reduction_10",
+        "name": "special_bonus_cooldown_reduction_15",
         "level": 3
       },
       {
@@ -4339,7 +4340,7 @@
         "level": 1
       },
       {
-        "name": "special_bonus_mp_regen_2",
+        "name": "special_bonus_mp_regen_3",
         "level": 1
       },
       {
@@ -4351,7 +4352,7 @@
         "level": 2
       },
       {
-        "name": "special_bonus_hp_regen_20",
+        "name": "special_bonus_hp_regen_25",
         "level": 3
       },
       {
@@ -4372,7 +4373,7 @@
     "abilities": [
       "tusk_ice_shards",
       "tusk_snowball",
-      "tusk_frozen_sigil",
+      "tusk_tag_team",
       "tusk_walrus_kick",
       "generic_hidden",
       "tusk_walrus_punch",
@@ -4396,7 +4397,7 @@
         "level": 2
       },
       {
-        "name": "special_bonus_unique_tusk_3",
+        "name": "special_bonus_unique_tusk_5",
         "level": 3
       },
       {
@@ -4408,7 +4409,7 @@
         "level": 4
       },
       {
-        "name": "special_bonus_unique_tusk_5",
+        "name": "special_bonus_unique_tusk_6",
         "level": 4
       }
     ]
@@ -4424,11 +4425,11 @@
     ],
     "talents": [
       {
-        "name": "special_bonus_movement_speed_25",
+        "name": "special_bonus_movement_speed_20",
         "level": 1
       },
       {
-        "name": "special_bonus_intelligence_8",
+        "name": "special_bonus_exp_boost_30",
         "level": 1
       },
       {
@@ -4468,15 +4469,15 @@
     ],
     "talents": [
       {
-        "name": "special_bonus_movement_speed_25",
+        "name": "special_bonus_movement_speed_20",
         "level": 1
       },
       {
-        "name": "special_bonus_exp_boost_20",
+        "name": "special_bonus_exp_boost_25",
         "level": 1
       },
       {
-        "name": "special_bonus_armor_6",
+        "name": "special_bonus_armor_8",
         "level": 2
       },
       {
@@ -4496,7 +4497,7 @@
         "level": 4
       },
       {
-        "name": "special_bonus_unique_abaddon_3",
+        "name": "special_bonus_unique_abaddon_4",
         "level": 4
       }
     ]
@@ -4513,7 +4514,7 @@
     ],
     "talents": [
       {
-        "name": "special_bonus_movement_speed_25",
+        "name": "special_bonus_movement_speed_20",
         "level": 1
       },
       {
@@ -4541,7 +4542,7 @@
         "level": 4
       },
       {
-        "name": "special_bonus_lifesteal_100",
+        "name": "special_bonus_unique_elder_titan_4",
         "level": 4
       }
     ]
@@ -4573,7 +4574,7 @@
         "level": 2
       },
       {
-        "name": "special_bonus_movement_speed_60",
+        "name": "special_bonus_movement_speed_35",
         "level": 3
       },
       {
@@ -4585,7 +4586,7 @@
         "level": 4
       },
       {
-        "name": "special_bonus_unique_legion_commander_2",
+        "name": "special_bonus_unique_legion_commander_5",
         "level": 4
       }
     ]
@@ -4697,7 +4698,7 @@
         "level": 1
       },
       {
-        "name": "special_bonus_hp_300",
+        "name": "special_bonus_hp_250",
         "level": 2
       },
       {
@@ -4792,11 +4793,11 @@
         "level": 2
       },
       {
-        "name": "special_bonus_gold_income_15",
+        "name": "special_bonus_gold_income_20",
         "level": 2
       },
       {
-        "name": "special_bonus_movement_speed_75",
+        "name": "special_bonus_movement_speed_45",
         "level": 3
       },
       {
@@ -4836,11 +4837,11 @@
         "level": 2
       },
       {
-        "name": "special_bonus_mp_regen_4",
+        "name": "special_bonus_mp_regen_6",
         "level": 2
       },
       {
-        "name": "special_bonus_movement_speed_75",
+        "name": "special_bonus_movement_speed_50",
         "level": 3
       },
       {
@@ -4906,7 +4907,7 @@
       "arc_warden_flux",
       "arc_warden_magnetic_field",
       "arc_warden_spark_wraith",
-      "generic_hidden",
+      "arc_warden_scepter",
       "generic_hidden",
       "arc_warden_tempest_double"
     ],
@@ -4916,15 +4917,15 @@
         "level": 1
       },
       {
-        "name": "special_bonus_attack_speed_25",
+        "name": "special_bonus_attack_speed_35",
         "level": 1
       },
       {
-        "name": "special_bonus_hp_350",
+        "name": "special_bonus_hp_300",
         "level": 2
       },
       {
-        "name": "special_bonus_unique_arc_warden_2",
+        "name": "special_bonus_unique_arc_warden_5",
         "level": 2
       },
       {
@@ -4965,7 +4966,7 @@
         "level": 1
       },
       {
-        "name": "special_bonus_cast_range_100",
+        "name": "special_bonus_cast_range_125",
         "level": 2
       },
       {
@@ -4977,7 +4978,7 @@
         "level": 3
       },
       {
-        "name": "special_bonus_hp_regen_20",
+        "name": "special_bonus_hp_regen_25",
         "level": 3
       },
       {
@@ -5040,7 +5041,7 @@
     "abilities": [
       "pangolier_swashbuckle",
       "pangolier_shield_crash",
-      "pangolier_heartpiercer",
+      "pangolier_lucky_shot",
       "generic_hidden",
       "generic_hidden",
       "pangolier_gyroshell",
@@ -5048,11 +5049,11 @@
     ],
     "talents": [
       {
-        "name": "special_bonus_mp_regen_2",
+        "name": "special_bonus_mp_regen_3",
         "level": 1
       },
       {
-        "name": "special_bonus_movement_speed_25",
+        "name": "special_bonus_unique_pangolier_7",
         "level": 1
       },
       {
@@ -5060,7 +5061,7 @@
         "level": 2
       },
       {
-        "name": "special_bonus_attack_speed_30",
+        "name": "special_bonus_unique_pangolier_6",
         "level": 2
       },
       {
@@ -5092,7 +5093,7 @@
     ],
     "talents": [
       {
-        "name": "special_bonus_attack_damage_20",
+        "name": "special_bonus_attack_damage_30",
         "level": 1
       },
       {
@@ -5100,11 +5101,11 @@
         "level": 1
       },
       {
-        "name": "special_bonus_gold_income_15",
+        "name": "special_bonus_gold_income_20",
         "level": 2
       },
       {
-        "name": "special_bonus_movement_speed_40",
+        "name": "special_bonus_movement_speed_35",
         "level": 2
       },
       {
@@ -5112,15 +5113,103 @@
         "level": 3
       },
       {
-        "name": "special_bonus_unique_dark_willow_1",
+        "name": "special_bonus_unique_dark_willow_3",
         "level": 3
       },
       {
-        "name": "special_bonus_attack_speed_200",
+        "name": "special_bonus_attack_speed_175",
         "level": 4
       },
       {
         "name": "special_bonus_unique_dark_willow_2",
+        "level": 4
+      }
+    ]
+  },
+  "npc_dota_hero_grimstroke": {
+    "abilities": [
+      "grimstroke_dark_artistry",
+      "grimstroke_ink_creature",
+      "grimstroke_spirit_walk",
+      "grimstroke_scepter",
+      "generic_hidden",
+      "grimstroke_soul_chain"
+    ],
+    "talents": [
+      {
+        "name": "special_bonus_movement_speed_30",
+        "level": 1
+      },
+      {
+        "name": "special_bonus_gold_income_15",
+        "level": 1
+      },
+      {
+        "name": "special_bonus_spell_amplify_12",
+        "level": 2
+      },
+      {
+        "name": "special_bonus_cast_range_125",
+        "level": 2
+      },
+      {
+        "name": "special_bonus_unique_grimstroke_3",
+        "level": 3
+      },
+      {
+        "name": "special_bonus_unique_grimstroke_4",
+        "level": 3
+      },
+      {
+        "name": "special_bonus_unique_grimstroke_1",
+        "level": 4
+      },
+      {
+        "name": "special_bonus_unique_grimstroke_2",
+        "level": 4
+      }
+    ]
+  },
+  "npc_dota_hero_mars": {
+    "abilities": [
+      "mars_spear",
+      "mars_gods_rebuke",
+      "mars_bulwark",
+      "generic_hidden",
+      "generic_hidden",
+      "mars_arena_of_blood"
+    ],
+    "talents": [
+      {
+        "name": "special_bonus_strength_8",
+        "level": 1
+      },
+      {
+        "name": "special_bonus_movement_speed_20",
+        "level": 1
+      },
+      {
+        "name": "special_bonus_attack_damage_25",
+        "level": 2
+      },
+      {
+        "name": "special_bonus_armor_8",
+        "level": 2
+      },
+      {
+        "name": "special_bonus_unique_mars_spear_bonus_damage",
+        "level": 3
+      },
+      {
+        "name": "special_bonus_unique_mars_spear_stun_duration",
+        "level": 3
+      },
+      {
+        "name": "special_bonus_unique_mars_gods_rebuke_extra_crit",
+        "level": 4
+      },
+      {
+        "name": "special_bonus_unique_mars_arena_of_blood_hp_regen",
         "level": 4
       }
     ]

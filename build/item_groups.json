@@ -6,8 +6,7 @@
   {
     "magic_wand": 1,
     "magic_stick": 1,
-    "branches": 1,
-    "enchanted_mango": 1
+    "branches": 1
   },
   {
     "ward_dispenser": 1,
@@ -27,6 +26,7 @@
   {
     "phase_boots": 1,
     "boots": 1,
+    "chainmail": 1,
     "blades_of_attack": 1
   },
   {
@@ -75,9 +75,6 @@
   },
   {
     "vladmir": 1,
-    "headdress": 1,
-    "ring_of_regen": 1,
-    "branches": 1,
     "ring_of_basilius": 1,
     "sobi_mask": 1,
     "ring_of_protection": 1,
@@ -92,6 +89,12 @@
     "ring_of_basilius": 1,
     "sobi_mask": 1,
     "ring_of_protection": 1
+  },
+  {
+    "holy_locket": 1,
+    "ring_of_tarrasque": 1,
+    "energy_booster": 1,
+    "cloak": 1
   },
   {
     "pipe": 1,
@@ -159,16 +162,13 @@
   {
     "force_staff": 1,
     "staff_of_wizardry": 1,
-    "ring_of_health": 1
+    "ring_of_regen": 1
   },
   {
     "hurricane_pike": 1,
-    "wraith_band": 1,
-    "circlet": 1,
-    "slippers": 1,
     "force_staff": 1,
     "staff_of_wizardry": 1,
-    "ring_of_health": 1,
+    "ring_of_regen": 1,
     "dragon_lance": 1,
     "ogre_axe": 1,
     "boots_of_elves": 1
@@ -176,17 +176,13 @@
   {
     "dagon": 1,
     "staff_of_wizardry": 1,
-    "null_talisman": 1,
-    "circlet": 1,
-    "mantle": 1
+    "crown": 1
   },
   {
     "dagon_2": 1,
     "dagon": 1,
     "staff_of_wizardry": 1,
-    "null_talisman": 1,
-    "circlet": 1,
-    "mantle": 1,
+    "crown": 1,
     "recipe_dagon": 1
   },
   {
@@ -194,9 +190,7 @@
     "dagon_2": 1,
     "dagon": 1,
     "staff_of_wizardry": 1,
-    "null_talisman": 1,
-    "circlet": 1,
-    "mantle": 1,
+    "crown": 1,
     "recipe_dagon": 1
   },
   {
@@ -205,9 +199,7 @@
     "dagon_2": 1,
     "dagon": 1,
     "staff_of_wizardry": 1,
-    "null_talisman": 1,
-    "circlet": 1,
-    "mantle": 1,
+    "crown": 1,
     "recipe_dagon": 1
   },
   {
@@ -217,9 +209,7 @@
     "dagon_2": 1,
     "dagon": 1,
     "staff_of_wizardry": 1,
-    "null_talisman": 1,
-    "circlet": 1,
-    "mantle": 1,
+    "crown": 1,
     "recipe_dagon": 1
   },
   {
@@ -250,6 +240,14 @@
     "blade_of_alacrity": 1
   },
   {
+    "ultimate_scepter_2": 1,
+    "ultimate_scepter": 1,
+    "point_booster": 1,
+    "staff_of_wizardry": 1,
+    "ogre_axe": 1,
+    "blade_of_alacrity": 1
+  },
+  {
     "refresher": 1,
     "pers": 1,
     "ring_of_health": 1,
@@ -263,8 +261,9 @@
   },
   {
     "heart": 1,
-    "reaver": 1,
-    "vitality_booster": 1
+    "ring_of_tarrasque": 1,
+    "vitality_booster": 1,
+    "reaver": 1
   },
   {
     "black_king_bar": 1,
@@ -373,8 +372,9 @@
   },
   {
     "monkey_king_bar": 1,
-    "hyperstone": 1,
-    "javelin": 1
+    "demon_edge": 1,
+    "javelin": 1,
+    "quarterstaff": 1
   },
   {
     "radiance": 1,
@@ -395,8 +395,8 @@
   },
   {
     "basher": 1,
-    "belt_of_strength": 1,
-    "javelin": 1
+    "mithril_hammer": 1,
+    "belt_of_strength": 1
   },
   {
     "bfury": 1,
@@ -451,6 +451,24 @@
     "belt_of_strength": 1
   },
   {
+    "kaya_and_sange": 1,
+    "sange": 1,
+    "ogre_axe": 1,
+    "belt_of_strength": 1,
+    "kaya": 1,
+    "staff_of_wizardry": 1,
+    "robe": 1
+  },
+  {
+    "yasha_and_kaya": 1,
+    "kaya": 1,
+    "staff_of_wizardry": 1,
+    "robe": 1,
+    "yasha": 1,
+    "blade_of_alacrity": 1,
+    "boots_of_elves": 1
+  },
+  {
     "satanic": 1,
     "lifesteal": 1,
     "claymore": 1,
@@ -460,7 +478,7 @@
     "mjollnir": 1,
     "maelstrom": 1,
     "mithril_hammer": 1,
-    "gloves": 1,
+    "javelin": 1,
     "hyperstone": 1
   },
   {
@@ -484,7 +502,7 @@
   {
     "maelstrom": 1,
     "mithril_hammer": 1,
-    "gloves": 1
+    "javelin": 1
   },
   {
     "desolator": 1,
@@ -532,9 +550,7 @@
   {
     "ancient_janggo": 1,
     "sobi_mask": 1,
-    "bracer": 1,
-    "circlet": 1,
-    "gauntlets": 1,
+    "crown": 1,
     "wind_lace": 1
   },
   {
@@ -549,14 +565,13 @@
     "chainmail": 1,
     "sobi_mask": 1,
     "blight_stone": 1,
-    "talisman_of_evasion": 1
+    "ultimate_orb": 1,
+    "wind_lace": 1
   },
   {
     "veil_of_discord": 1,
     "helm_of_iron_will": 1,
-    "null_talisman": 1,
-    "circlet": 1,
-    "mantle": 1
+    "crown": 1
   },
   {
     "guardian_greaves": 1,
@@ -573,15 +588,13 @@
   {
     "rod_of_atos": 1,
     "staff_of_wizardry": 1,
-    "bracer": 1,
-    "circlet": 1,
-    "gauntlets": 1
+    "crown": 1
   },
   {
     "abyssal_blade": 1,
     "basher": 1,
+    "mithril_hammer": 1,
     "belt_of_strength": 1,
-    "javelin": 1,
     "vanguard": 1,
     "ring_of_health": 1,
     "vitality_booster": 1,
@@ -593,15 +606,6 @@
     "ogre_axe": 1,
     "belt_of_strength": 1,
     "talisman_of_evasion": 1
-  },
-  {
-    "ring_of_aquila": 1,
-    "wraith_band": 1,
-    "circlet": 1,
-    "slippers": 1,
-    "ring_of_basilius": 1,
-    "sobi_mask": 1,
-    "ring_of_protection": 1
   },
   {
     "tranquil_boots": 1,

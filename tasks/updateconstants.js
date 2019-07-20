@@ -1,6 +1,7 @@
 const request = require('request');
 const async = require('async');
 const fs = require('fs');
+const simplevdf = require('simple-vdf');
 
 const extraStrings = {
   DOTA_ABILITY_BEHAVIOR_NONE: "None",
@@ -32,12 +33,12 @@ const ignoreStrings = [
 ]
 
 const badNames = ["Version", "npc_dota_hero_base", "npc_dota_hero_target_dummy"];
+const now = Number(new Date());
 
-const sources = [
-  {
+const sources = [{
     key: "items",
     url: [
-      'https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/resource/dota_english.json',
+      'https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/resource/localization/abilities_english.json',
       'https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/items.json'
     ],
     transform: respObj => {
@@ -56,19 +57,18 @@ const sources = [
       Object.keys(scripts).filter(key => {
         return !(key.includes("item_recipe") && scripts[key].ItemCost === "0") && key !== "Version";
       }).forEach(key => {
-        var item = {};
+        var item = { ...replaceSpecialAttribs(strings[`DOTA_Tooltip_ability_${key}_Description`], scripts[key].AbilitySpecial, true) };
 
         item.id = parseInt(scripts[key].ID);
-        item.img = `/apps/dota2/images/items/${key.replace(/^item_/, '')}_lg.png?3`;
+        item.img = `/apps/dota2/images/items/${key.replace(/^item_/, '')}_lg.png?t=${now}`;
         if (key.includes("item_recipe")) {
-          item.img = "/apps/dota2/images/items/recipe_lg.png?3";
+          item.img = `/apps/dota2/images/items/recipe_lg.png?t=${now}`;
         }
 
         item.dname = strings[`DOTA_Tooltip_ability_${key}`];
         item.qual = scripts[key].ItemQuality;
         item.cost = parseInt(scripts[key].ItemCost);
 
-        item.desc = replaceSpecialAttribs(strings[`DOTA_Tooltip_ability_${key}_Description`], scripts[key].AbilitySpecial) || "";
         var notes = [];
         for (let i = 0; strings[`DOTA_Tooltip_ability_${key}_Note${i}`]; i++) {
           notes.push(strings[`DOTA_Tooltip_ability_${key}_Note${i}`]);
@@ -76,7 +76,8 @@ const sources = [
 
         item.notes = notes.join("\n");
 
-        item.attrib = formatAttrib(scripts[key].AbilitySpecial, strings, `DOTA_Tooltip_ability_${key}_`);
+        item.attrib = formatAttrib(scripts[key].AbilitySpecial, strings, `DOTA_Tooltip_ability_${key}_`)
+          .filter(attr => !attr.generated || attr.key === 'lifetime');
 
         item.mc = parseInt(scripts[key].AbilityManaCost) || false;
         item.cd = parseInt(scripts[key].AbilityCooldown) || false;
@@ -89,7 +90,7 @@ const sources = [
         items[key.replace(/^item_/, '')] = item;
       });
 
-    // Load recipes
+      // Load recipes
       Object.keys(scripts).filter(key => scripts[key].ItemRequirements && scripts[key].ItemResult).forEach(key => {
         result_key = scripts[key].ItemResult.replace(/^item_/, '');
         items[result_key].components = scripts[key].ItemRequirements[0].split(";").map(item => item.replace(/^item_/, ''));
@@ -98,117 +99,116 @@ const sources = [
 
       //Manually Adding DiffBlade2 for match data prior to 7.07
       items['diffusal_blade_2'] = {
-              "id": 196,
-              "img": "/apps/dota2/images/items/diffusal_blade_2_lg.png?3",
-              "dname": "Diffusal Blade",
-              "qual": "artifact",
-              "cost": 3850,
-              "desc": "Active: Purge Targets an enemy, removing buffs from the target and slowing it for 4 seconds.Range: 600\nPassive: ManabreakEach attack burns 50 mana from the target, and deals 0.8 physical damage per burned mana. Burns 16 mana per attack from melee illusions and 8 mana per attack from ranged illusions. Dispel Type: Basic Dispel",
-              "notes": "Does not stack with other manabreak abilities.",
-              "attrib": [
-                  {
-                      "key": "bonus_agility",
-                      "header": "",
-                      "value": [
-                          "25",
-                          "35"
-                      ],
-                      "footer": "Agility"
-                  },
-                  {
-                      "key": "bonus_intellect",
-                      "header": "",
-                      "value": [
-                          "10",
-                          "15"
-                      ],
-                      "footer": "Intelligence"
-                  },
-                  {
-                      "key": "initial_charges",
-                      "header": "INITIAL CHARGES:",
-                      "value": "8",
-                      "generated": true
-                  },
-                  {
-                      "key": "feedback_mana_burn",
-                      "header": "FEEDBACK MANA BURN:",
-                      "value": "50",
-                      "generated": true
-                  },
-                  {
-                      "key": "feedback_mana_burn_illusion_melee",
-                      "header": "FEEDBACK MANA BURN ILLUSION MELEE:",
-                      "value": "16",
-                      "generated": true
-                  },
-                  {
-                      "key": "feedback_mana_burn_illusion_ranged",
-                      "header": "FEEDBACK MANA BURN ILLUSION RANGED:",
-                      "value": "8",
-                      "generated": true
-                  },
-                  {
-                      "key": "purge_summoned_damage",
-                      "header": "PURGE SUMMONED DAMAGE:",
-                      "value": "99999",
-                      "generated": true
-                  },
-                  {
-                      "key": "purge_rate",
-                      "header": "PURGE RATE:",
-                      "value": "5",
-                      "generated": true
-                  },
-                  {
-                      "key": "purge_root_duration",
-                      "header": "PURGE ROOT DURATION:",
-                      "value": "3",
-                      "generated": true
-                  },
-                  {
-                      "key": "purge_slow_duration",
-                      "header": "PURGE SLOW DURATION:",
-                      "value": "4",
-                      "generated": true
-                  },
-                  {
-                      "key": "damage_per_burn",
-                      "header": "DAMAGE PER BURN:",
-                      "value": "0.8",
-                      "generated": true
-                  },
-                  {
-                      "key": "cast_range_tooltip",
-                      "header": "CAST RANGE TOOLTIP:",
-                      "value": "600",
-                      "generated": true
-                  }
-              ],
-              "mc": false,
-              "cd": 4,
-              "lore": "An enchanted blade that allows the user to cut straight into the enemy's soul.",
-              "components": [
-                  "diffusal_blade",
-                  "recipe_diffusal_blade"
-              ],
-              "created": true
+        "id": 196,
+        "img": "/apps/dota2/images/items/diffusal_blade_2_lg.png?3",
+        "dname": "Diffusal Blade",
+        "qual": "artifact",
+        "cost": 3850,
+        "desc": "Active: Purge Targets an enemy, removing buffs from the target and slowing it for 4 seconds.Range: 600\nPassive: ManabreakEach attack burns 50 mana from the target, and deals 0.8 physical damage per burned mana. Burns 16 mana per attack from melee illusions and 8 mana per attack from ranged illusions. Dispel Type: Basic Dispel",
+        "notes": "Does not stack with other manabreak abilities.",
+        "attrib": [{
+            "key": "bonus_agility",
+            "header": "",
+            "value": [
+              "25",
+              "35"
+            ],
+            "footer": "Agility"
+          },
+          {
+            "key": "bonus_intellect",
+            "header": "",
+            "value": [
+              "10",
+              "15"
+            ],
+            "footer": "Intelligence"
+          },
+          {
+            "key": "initial_charges",
+            "header": "INITIAL CHARGES:",
+            "value": "8",
+            "generated": true
+          },
+          {
+            "key": "feedback_mana_burn",
+            "header": "FEEDBACK MANA BURN:",
+            "value": "50",
+            "generated": true
+          },
+          {
+            "key": "feedback_mana_burn_illusion_melee",
+            "header": "FEEDBACK MANA BURN ILLUSION MELEE:",
+            "value": "16",
+            "generated": true
+          },
+          {
+            "key": "feedback_mana_burn_illusion_ranged",
+            "header": "FEEDBACK MANA BURN ILLUSION RANGED:",
+            "value": "8",
+            "generated": true
+          },
+          {
+            "key": "purge_summoned_damage",
+            "header": "PURGE SUMMONED DAMAGE:",
+            "value": "99999",
+            "generated": true
+          },
+          {
+            "key": "purge_rate",
+            "header": "PURGE RATE:",
+            "value": "5",
+            "generated": true
+          },
+          {
+            "key": "purge_root_duration",
+            "header": "PURGE ROOT DURATION:",
+            "value": "3",
+            "generated": true
+          },
+          {
+            "key": "purge_slow_duration",
+            "header": "PURGE SLOW DURATION:",
+            "value": "4",
+            "generated": true
+          },
+          {
+            "key": "damage_per_burn",
+            "header": "DAMAGE PER BURN:",
+            "value": "0.8",
+            "generated": true
+          },
+          {
+            "key": "cast_range_tooltip",
+            "header": "CAST RANGE TOOLTIP:",
+            "value": "600",
+            "generated": true
+          }
+        ],
+        "mc": false,
+        "cd": 4,
+        "lore": "An enchanted blade that allows the user to cut straight into the enemy's soul.",
+        "components": [
+          "diffusal_blade",
+          "recipe_diffusal_blade"
+        ],
+        "created": true
       };
 
       //Manually added for match data prior to 7.07
       items['recipe_iron_talon'] = {
-            "id": 238,
-            "img": "/apps/dota2/images/items/recipe_lg.png?3",
-            "dname": "Iron Talon Recipe",
-            "cost": 125,
-            "desc": "",
-            "notes": "",
-            "attrib": [],
-            "mc": false,
-            "cd": false,
-            "lore": "",
-            "components": null,
-            "created": false
+        "id": 238,
+        "img": "/apps/dota2/images/items/recipe_lg.png?3",
+        "dname": "Iron Talon Recipe",
+        "cost": 125,
+        "desc": "",
+        "notes": "",
+        "attrib": [],
+        "mc": false,
+        "cd": false,
+        "lore": "",
+        "components": null,
+        "created": false
       };
 
       return items;
@@ -253,14 +253,14 @@ const sources = [
   {
     key: "abilities",
     url: [
-      'https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/resource/dota_english.json',
+      'https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/resource/localization/abilities_english.json',
       'https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/npc_abilities.json'
     ],
     transform: respObj => {
       const strings = respObj[0].lang.Tokens;
       const scripts = respObj[1].DOTAAbilities;
 
-      var not_abilities = [ "Version", "ability_base", "default_attack", "attribute_bonus", "ability_deward" ];
+      var not_abilities = ["Version", "ability_base", "default_attack", "attribute_bonus", "ability_deward"];
 
       var abilities = {};
 
@@ -279,11 +279,11 @@ const sources = [
 
         ability.attrib = formatAttrib(scripts[key].AbilitySpecial, strings, `DOTA_Tooltip_ability_${key}_`);
 
-        if(scripts[key].AbilityManaCost || scripts[key].AbilityCooldown) {
-          if(scripts[key].AbilityManaCost) {
+        if (scripts[key].AbilityManaCost || scripts[key].AbilityCooldown) {
+          if (scripts[key].AbilityManaCost) {
             ability.mc = formatValues(scripts[key].AbilityManaCost, false, "/");
           }
-          if(scripts[key].AbilityCooldown) {
+          if (scripts[key].AbilityCooldown) {
             ability.cd = formatValues(scripts[key].AbilityCooldown, false, "/");
           }
         }
@@ -325,12 +325,14 @@ const sources = [
     url: [
       "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/resource/dota_english.json",
       "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/npc_heroes.json",
+      "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/resource/localization/dota_english.json",
     ],
     transform: respObj => {
       let heroes = [];
       let keys = Object.keys(respObj[1].DOTAHeroes).filter((name) => !badNames.includes(name));
       keys.forEach((name) => {
         let h = formatVpkHero(name, respObj[1], respObj[0].lang.Tokens[name]);
+        h.localized_name = h.localized_name || respObj[2].lang.Tokens[name];
         heroes.push(h);
       });
       heroes = heroes.sort((a, b) => a.id - b.id);
@@ -346,12 +348,14 @@ const sources = [
     url: [
       "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/resource/dota_english.json",
       "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/npc_heroes.json",
+      "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/resource/localization/dota_english.json",
     ],
     transform: respObj => {
       let heroes = [];
       let keys = Object.keys(respObj[1].DOTAHeroes).filter((name) => !badNames.includes(name));
       keys.forEach((name) => {
         let h = formatVpkHero(name, respObj[1], respObj[0].lang.Tokens[name]);
+        h.localized_name = h.localized_name || respObj[2].lang.Tokens[name];
         heroes.push(h);
       });
       heroes = heroes.sort((a, b) => a.id - b.id);
@@ -368,19 +372,21 @@ const sources = [
     transform: respObj => {
       var DOTAHeroes = respObj.DOTAHeroes;
       const heroAbilities = {};
-      Object.keys(DOTAHeroes).forEach(function(heroKey){
-        if (heroKey != "Version" && heroKey != "npc_dota_hero_base" && heroKey != "npc_dota_hero_target_dummy"){
-          const newHero = {"abilities": [], "talents": []};
-          Object.keys(DOTAHeroes[heroKey]).forEach(function(key){
+      Object.keys(DOTAHeroes).forEach(function(heroKey) {
+        if (heroKey != "Version" && heroKey != "npc_dota_hero_base" && heroKey != "npc_dota_hero_target_dummy") {
+          const newHero = { "abilities": [], "talents": [] };
+          let talentCounter = 2;
+          Object.keys(DOTAHeroes[heroKey]).forEach(function(key) {
             var abilityRegexMatch = key.match(/Ability([0-9]+)/);
-            if (abilityRegexMatch){
+            if (abilityRegexMatch) {
               var abilityNum = parseInt(abilityRegexMatch[1]);
-              if (abilityNum < 10){
+              if (abilityNum < 10) {
                 newHero["abilities"].push(DOTAHeroes[heroKey][key]);
               }
-              else{
+              else {
                 // -8 not -10 because going from 0-based index -> 1 and flooring divison result
-                newHero["talents"].push({"name": DOTAHeroes[heroKey][key], "level": Math.floor((abilityNum - 8) / 2)});
+                newHero["talents"].push({ "name": DOTAHeroes[heroKey][key], "level": Math.floor((talentCounter) / 2) });
+                talentCounter++;
               }
             }
           });
@@ -402,23 +408,25 @@ const sources = [
       }
       return region;
     },
-  }, /* {
-    key: "cluster",
-    url: "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/regions.json",
-    transform: respObj => {
-      const cluster = {};
-      const regions = respObj.regions;
-      for (const key in regions) {
-        if (regions[key].clusters) {
-          regions[key].clusters.forEach(function(c) {
-            cluster[c] = Number(regions[key].region);
-          });
-        }
-      }
-      cluster["121"] = Number(regions['USEast'].region);
-      return cluster;
-    },
-  }, */ {
+  },
+  /* {
+     key: "cluster",
+     url: "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/regions.json",
+     transform: respObj => {
+       const cluster = {};
+       const regions = respObj.regions;
+       for (const key in regions) {
+         if (regions[key].clusters) {
+           regions[key].clusters.forEach(function(c) {
+             cluster[c] = Number(regions[key].region);
+           });
+         }
+       }
+       cluster["121"] = Number(regions['USEast'].region);
+       return cluster;
+     },
+   }, */
+  {
     key: "countries",
     url: "https://raw.githubusercontent.com/mledoze/countries/master/countries.json",
     transform: respObj => {
@@ -434,70 +442,205 @@ const sources = [
       return countries;
     },
   },
+  {
+    key: "chat_wheel",
+    url: [
+      "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/chat_wheel.txt",
+      "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/resource/localization/dota_english.json",
+      "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/resource/localization/hero_chat_wheel_english.txt"
+    ],
+    transform: respObj => {
+      const chat_wheel = respObj[0];
+      const lang = respObj[1].lang.Tokens;
+      const chat_wheel_lang = respObj[2];
+
+      const result = {};
+
+      function localize(input) {
+        if (!/^#/.test(input)) {
+          return input;
+        }
+        var key = input.replace(/^#/, '');
+        return lang[key] || chat_wheel_lang[key] || key;
+      }
+
+      function addMessage(key, message) {
+        var data = {
+          id: parseInt(message.message_id),
+          name: key,
+          all_chat: message.all_chat == "1" ? true : undefined,
+          label: localize(message.label),
+          message: localize(message.message),
+          image: message.image,
+          badge_tier: message.unlock_hero_badge_tier
+        };
+        if (message.sound) {
+          if (/^soundboard\./.test(message.sound) || /^wisp_/.test(key)) {
+            // All of the soundboard clips and the IO responses are wav files
+            data.sound_ext = "wav";
+          }
+          else if (message.message_id / 1000 >= 121) {
+            // Gets the hero id from the message id
+            // If the hero is grimstroke or newer, the files are aac
+            data.sound_ext = "aac";
+          }
+          else {
+            // All other response clips used are mp3s
+            data.sound_ext = "mp3";
+          }
+        }
+        result[data.id] = data;
+      }
+
+      for (let key in chat_wheel.messages) {
+        addMessage(key, chat_wheel.messages[key])
+      }
+      for (let hero_id in chat_wheel.hero_messages) {
+        for (let key in chat_wheel.hero_messages[hero_id]) {
+          addMessage(key, chat_wheel.hero_messages[hero_id][key])
+        }
+      }
+      return result;
+    },
+  }, 
+  {
+    key: "patchnotes",
+    url: "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/resource/localization/patchnotes/patchnotes_english.txt",
+    transform: respObj => {
+      let items = Object.keys(require("../build/items.json"));
+      let heroes = Object.keys(require("../build/hero_names.json")).map((hero) => hero.replace("npc_dota_hero_", ""));
+
+      let result = {};
+      let keys = Object.keys(respObj);
+      for (let key of keys) {
+        let keyArr = key.replace("dota_patch_", "").split("_");
+        let patch = keyArr.splice(0, 2).join("_");
+        if (!result[patch]) result[patch] = {
+          general: [],
+          items: {},
+          heroes: {}
+        };
+
+        if (keyArr[0].toLowerCase() == "general") {
+          result[patch].general.push(respObj[key]);
+        }
+        else if (keyArr[0] == "item") {
+          let searchName = keyArr.slice(1);
+          let itemName = parseNameFromArray(searchName, items);
+          if (itemName) {
+            if (!result[patch].items[itemName]) result[patch].items[itemName] = [];
+            result[patch].items[itemName].push(respObj[key])
+          }
+          else {
+            if (!result[patch].items.misc) result[patch].items.misc = [];
+            result[patch].items.misc.push(respObj[key]);
+          }
+        }
+        else {
+          let heroName = parseNameFromArray(keyArr, heroes);
+          if (heroName) {
+            if (!result[patch].heroes[heroName]) result[patch].heroes[heroName] = [];
+            result[patch].heroes[heroName].push(respObj[key])
+          }
+          else {
+            if (!result[patch].heroes.misc) result[patch].heroes.misc = [];
+            result[patch].heroes.misc.push(respObj[key]);
+          }
+        }
+      }
+
+      return result;
+    },
+  },
 ];
 
-const patches = JSON.parse(fs.readFileSync('./json/patch.json'))
-const lastPatch = patches[patches.length - 1]
-const today = new Date()
+const patches = JSON.parse(fs.readFileSync('./json/patch.json'));
+const newPatches = [];
+const lastPatch = patches[patches.length - 1];
+const today = new Date();
 const dayDifference = Math.ceil(Math.abs(today.getTime() - new Date(lastPatch.date).getTime()) / (1000 * 3600 * 24));
+patches.forEach((p, i) => {
+  newPatches.push({ ...p, id: i });
+});
+/*
 if (dayDifference > 14) {
   const n = Math.floor(dayDifference / 14)
   for (let i = 0; i < n; i += 1) {
     const versionNum = parseFloat(patches[patches.length - 1].name, 10) + 0.01
     const date = new Date(patches[patches.length - 1].date)
-    patches.push({ name: versionNum.toFixed(2), date: new Date(date.getTime() + 60 * 60 * 24 * 1000 * 14) })
+    patches.push({ id: i, name: versionNum.toFixed(2), date: new Date(date.getTime() + 60 * 60 * 24 * 1000 * 14) })
   }
-  fs.writeFileSync('./json/patch.json', JSON.stringify(patches, null, 1))
 }
+*/
+fs.writeFileSync('./json/patch.json', JSON.stringify(newPatches, null, 1))
 
 // "heropickerdata": "http://www.dota2.com/jsfeed/heropickerdata?l=english",
 // "heropediadata": "http://www.dota2.com/jsfeed/heropediadata?feeds=herodata",
 // "leagues": "https://api.opendota.com/api/leagues",
 async.each(sources, function(s, cb) {
-      const url = s.url;
-      //grab raw data from each url and save
-      console.log(url);
-      if (typeof url === 'object') {
-        async.map(url, (urlString, cb) => {
-          request(urlString, (err, resp, body) => {
-            cb(err, JSON.parse(body));
-          });
-        }, (err, resultArr) => {
-          handleResponse(err, {
-            statusCode: 200
-          }, JSON.stringify(resultArr));
+    const url = s.url;
+    //grab raw data from each url and save
+    console.log(url);
+    if (typeof url === 'object') {
+      async.map(url, (urlString, cb) => {
+        request(urlString, (err, resp, body) => {
+          cb(err, parseJson(body));
         });
-      }
-      else {
-        request(url, handleResponse);
-      }
-
-      function handleResponse(err, resp, body) {
-        if (err || resp.statusCode !== 200) {
-          return cb(err);
-        }
-        body = JSON.parse(body);
-        if (s.transform) {
-          body = s.transform(body);
-        }
-        fs.writeFileSync('./build/' + s.key + '.json', JSON.stringify(body, null, 2));
-        cb(err);
-      }
-    },
-    function(err) {
-      if (err) {
-        throw err;
-      }
-      // Copy manual json files to build
-      const jsons = fs.readdirSync('./json');
-      jsons.forEach((filename) => {
-        fs.writeFileSync('./build/' + filename, fs.readFileSync('./json/' + filename, 'utf-8'));
+      }, (err, resultArr) => {
+        handleResponse(err, {
+          statusCode: 200
+        }, JSON.stringify(resultArr));
       });
-      // Reference built files in index.js
-      const cfs = fs.readdirSync('./build');
-      // Exports aren't supported in Node yet, so use old export syntax for now
-      // const code = cfs.map((filename) => `export const ${filename.split('.')[0]} = require(__dirname + '/json/${filename.split('.')[0]}.json');`).join('\n';
-      const code = `module.exports = {
+    }
+    else {
+      request(url, handleResponse);
+    }
+
+    function parseJson(text) {
+      try {
+        return JSON.parse(text);
+      }
+      catch (err) {
+        let normalized = {};
+        if (typeof text === "string") {
+          let vdf = simplevdf.parse(text);
+          vdf = vdf[Object.keys(vdf)[0]];
+          let keys = Object.keys(vdf);
+          for (let key of keys) {
+            normalized[key.toLowerCase()] = vdf[key];
+          }
+        } 
+        return normalized;
+      }
+    }
+
+    function handleResponse(err, resp, body) {
+      if (err || resp.statusCode !== 200) {
+        return cb(err);
+      }
+      let parsed;
+      body = parseJson(body)
+      if (s.transform) {
+        body = s.transform(body);
+      }
+      fs.writeFileSync('./build/' + s.key + '.json', JSON.stringify(body, null, 2));
+      cb(err);
+    }
+  },
+  function(err) {
+    if (err) {
+      throw err;
+    }
+    // Copy manual json files to build
+    const jsons = fs.readdirSync('./json');
+    jsons.forEach((filename) => {
+      fs.writeFileSync('./build/' + filename, fs.readFileSync('./json/' + filename, 'utf-8'));
+    });
+    // Reference built files in index.js
+    const cfs = fs.readdirSync('./build');
+    // Exports aren't supported in Node yet, so use old export syntax for now
+    // const code = cfs.map((filename) => `export const ${filename.split('.')[0]} = require(__dirname + '/json/${filename.split('.')[0]}.json');`).join('\n';
+    const code = `module.exports = {
 ${cfs.map((filename) => `${filename.split('.')[0]}: require(__dirname + '/build/${filename.split('.')[0]}.json')`).join(',\n')}
 };`;
     fs.writeFileSync('./index.js', code);
@@ -507,10 +650,11 @@ ${cfs.map((filename) => `${filename.split('.')[0]}: require(__dirname + '/build/
 function expandItemGroup(key, items) {
   let base = [key];
   if (items[key] && items[key].components) {
-    return [].concat.apply(base, items[key].components.map(function (c) {
+    return [].concat.apply(base, items[key].components.map(function(c) {
       return expandItemGroup(c, items);
     }));
-  } else {
+  }
+  else {
     return base;
   }
 }
@@ -520,12 +664,12 @@ function replaceUselessDecimals(strToReplace) {
 }
 
 // Formats something like "20 21 22" or [ 20, 21, 22 ] to be "20 / 21 / 22"
-function formatValues(value, percent=false, separator=" / ") {
+function formatValues(value, percent = false, separator = " / ") {
   var values = Array.isArray(value) ? value : String(value).split(" ");
   if (values.every(v => v == values[0])) {
-    values = [ values[0] ];
+    values = [values[0]];
   }
-  if (percent){
+  if (percent) {
     values = values.map(v => v + "%");
   }
   let len = values.length;
@@ -558,7 +702,8 @@ function formatAttrib(attributes, strings, strings_prefix) {
       final.value = formatValues(attr[key], match[1]);
       final.footer = strings[`dota_ability_variable_${header}`];
       if ("dota_ability_variable_attack_range".includes(header)) final.footer = final.footer.replace(/<[^>]*>/g, "");
-    } else {
+    }
+    else {
       final.header = header.replace(/<[^>]*>/g, "");
       final.value = formatValues(attr[key], match[1]);
     }
@@ -567,9 +712,25 @@ function formatAttrib(attributes, strings, strings_prefix) {
   }).filter(a => a);
 }
 
+function catogerizeItemAbilities(abilities) {
+  const itemAbilities = {}
+  abilities.forEach(ability => {
+    if (!ability.includes("<h1>")) {
+      (itemAbilities.hint = itemAbilities.hint || []).push(ability)
+    }
+    else {
+      ability = ability.replace(/<[^h1>]*>/gi, "");
+      const regExp = /<h1>\s*(.*)\s*:\s*(.*)\s*<\/h1>\s*([\s\S]*)/gi
+      const [_, type, name, desc] = regExp.exec(ability);
+      (itemAbilities[type.toLowerCase()] = itemAbilities[type.toLowerCase()] || []).push({ "name": name, "desc": desc })
+    }
+  })
+  return itemAbilities;
+}
+
 // Formats templates like "Storm's movement speed is %storm_move_speed%" with "Storm's movement speed is 32"
 // args are the template, and a list of attribute dictionaries, like the ones in AbilitySpecial for each ability in the npc_abilities.json from the vpk
-function replaceSpecialAttribs(template, attribs) {
+function replaceSpecialAttribs(template, attribs, isItem = false) {
   if (!template) {
     return template;
   }
@@ -591,7 +752,13 @@ function replaceSpecialAttribs(template, attribs) {
       return "<b>" + Math.abs(attr[name]) + "</b>";
     });
   }
-  template = template.replace(/\\n/g, "\n").replace(/<span.*>.*<\/span>/g, "<b>$&</b>"); //.replace(/<[^>]*>/g, "");
+  // template = template.replace(/\\n/g, "\n").replace(/<span.*>.*<\/span>/g, "<b>$&</b>"); //.replace(/<[^>]*>/g, "");
+  if (isItem) {
+    template = template.replace(/<br>/gi, '\n')
+    const abilities = template.split("\\n")
+    return catogerizeItemAbilities(abilities)
+  }
+  template = template.replace(/\\n/g, "\n").replace(/<[^>]*>/g, "");
   return template;
 }
 
@@ -603,7 +770,8 @@ function formatBehavior(string) {
     .map((item) => {
       if (!~ignoreStrings.indexOf(item)) {
         return extraStrings[item];
-      } else {
+      }
+      else {
         return null;
       }
     })
@@ -611,7 +779,8 @@ function formatBehavior(string) {
 
   if (split.length === 1) {
     return split[0];
-  } else {
+  }
+  else {
     return split;
   }
 }
@@ -663,4 +832,15 @@ function formatVpkHero(key, vpkr, localized_name) {
   h.legs = Number(vpkrh.Legs || baseHero.Legs);
 
   return h;
+}
+
+function parseNameFromArray(array, names) {
+  let final = [];
+  for (let i = 1; i <= array.length; i++) {
+    let name = array.slice(0, i).join("_");
+    if (names.includes(name)) {
+      final.push(name)
+    }
+  }
+  return final.map((a) => a)[0];
 }

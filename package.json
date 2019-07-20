@@ -1,6 +1,6 @@
 {
   "name": "dotaconstants",
-  "version": "5.26.0",
+  "version": "6.18.0",
   "description": "Constant data for Dota 2 applications",
   "main": "index.js",
   "scripts": {
@@ -19,7 +19,8 @@
   "homepage": "https://github.com/odota/dotaconstants#readme",
   "dependencies": {},
   "devDependencies": {
-    "async": "^2.0.1",
-    "request": "^2.74.0"
+    "async": "^2.6.1",
+    "request": "^2.88.0",
+    "simple-vdf": "^1.1.1"
   }
 }
