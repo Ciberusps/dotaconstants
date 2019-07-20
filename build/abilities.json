@@ -2341,6 +2341,7 @@
   },
   "morphling_adaptive_strike_agi": {
     "dname": "Adaptive Strike (Agility)",
+    "linkedAbility": "morphling_adaptive_strike_str",
     "behavior": "Unit Target",
     "dmg_type": "Magical",
     "bkbpierce": "No",
@@ -2400,6 +2401,7 @@
   },
   "morphling_adaptive_strike_str": {
     "dname": "Adaptive Strike (Strength)",
+    "linkedAbility": "morphling_adaptive_strike_agi",
     "behavior": "Unit Target",
     "dmg_type": "Magical",
     "bkbpierce": "No",
@@ -2476,6 +2478,7 @@
   },
   "morphling_morph_agi": {
     "dname": "Attribute Shift (Agility Gain)",
+    "linkedAbility": "morphling_morph_str",
     "behavior": "No Target",
     "desc": "Morphling shifts its form, pulling points from Strength and pouring them into Agility. The process is reversible.  Additional points in Attribute Shift increase the rate of stat change.  Passively grants bonus Agility.",
     "attrib": [
@@ -2522,6 +2525,7 @@
   },
   "morphling_morph_str": {
     "dname": "Attribute Shift (Strength Gain)",
+    "linkedAbility": "morphling_morph_agi",
     "behavior": "No Target",
     "desc": "Morphling shifts its form, pulling points from Agility and pouring them into Strength. The process is reversible.  Additional points in Attribute Shift increase the rate of stat change.  Passively grants bonus Strength.",
     "attrib": [
@@ -2670,6 +2674,7 @@
   },
   "nevermore_shadowraze1": {
     "dname": "Shadowraze",
+    "linkedAbility": "nevermore_shadowraze2",
     "behavior": "No Target",
     "dmg_type": "Magical",
     "bkbpierce": "No",
@@ -2724,6 +2729,7 @@
   },
   "nevermore_shadowraze2": {
     "dname": "Shadowraze",
+    "linkedAbility": "nevermore_shadowraze3",
     "behavior": "No Target",
     "dmg_type": "Magical",
     "bkbpierce": "No",
@@ -2778,6 +2784,7 @@
   },
   "nevermore_shadowraze3": {
     "dname": "Shadowraze",
+    "linkedAbility": "nevermore_shadowraze1",
     "behavior": "No Target",
     "dmg_type": "Magical",
     "bkbpierce": "No",
@@ -5521,6 +5528,7 @@
   },
   "tiny_craggy_exterior": {
     "dname": "Tree Grab",
+    "linkedAbility": "tiny_toss_tree",
     "behavior": "Unit Target",
     "dmg_type": "Physical",
     "bkbpierce": "Yes",
@@ -5590,6 +5598,7 @@
   },
   "tiny_toss_tree": {
     "dname": "Tree Throw",
+    "linkedAbility": "tiny_craggy_exterior",
     "behavior": [
       "Unit Target",
       "Point Target",
@@ -15456,6 +15465,7 @@
     "img": "/apps/dota2/images/abilities/chen_divine_favor_md.png"
   },
   "chen_test_of_faith_teleport": {
+    "linkedAbility": "chen_test_of_faith",
     "behavior": "Unit Target",
     "desc": "Teleports an allied unit back to the base.  Creeps are teleported instantly, while Heroes have a delay before teleporting. If cast on Chen, all units controlled by Chen through Holy Persuasion will be teleported to him after a delay.",
     "attrib": [
@@ -22141,6 +22151,7 @@
   },
   "nyx_assassin_burrow": {
     "dname": "Burrow",
+    "linkedAbility": "nyx_assassin_unburrow",
     "behavior": [
       "No Target",
       "Hidden",
@@ -22195,6 +22206,7 @@
   },
   "nyx_assassin_unburrow": {
     "dname": "Unburrow",
+    "linkedAbility": "nyx_assassin_burrow",
     "behavior": [
       "Hidden",
       "No Target"
@@ -29379,6 +29391,7 @@
   },
   "dark_willow_bedlam": {
     "dname": "Bedlam",
+    "linkedAbility": "dark_willow_terrorize",
     "behavior": [
       "No Target",
       "Instant Cast"
@@ -29438,6 +29451,7 @@
   },
   "dark_willow_terrorize": {
     "dname": "Terrorize",
+    "linkedAbility": "dark_willow_bedlam",
     "behavior": [
       "Point Target",
       "AOE",

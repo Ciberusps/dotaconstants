@@ -269,6 +269,7 @@ const sources = [{
 
         ability.dname = strings[`DOTA_Tooltip_ability_${key}`];
 
+        if (scripts[key].LinkedAbility) ability.linkedAbility = scripts[key].LinkedAbility;
         ability.behavior = formatBehavior(scripts[key].AbilityBehavior) || undefined;
         ability.dmg_type = formatBehavior(scripts[key].AbilityUnitDamageType) || undefined;
         ability.bkbpierce = formatBehavior(scripts[key].SpellImmunityType) || undefined;
@@ -759,7 +760,7 @@ function replaceSpecialAttribs(template, attribs, isItem = false) {
   }
   template = template.replace(/\\n/g, "\n");
   // .replace(/<span.*>.*<\/span>/g, "<b>$&</b>"); //.replace(/<[^>]*>/g, "");
-  
+
   // template = template.replace(/\\n/g, "\n").replace(/<[^>]*>/g, "");
   return template;
 }
