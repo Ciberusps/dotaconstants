@@ -752,13 +752,15 @@ function replaceSpecialAttribs(template, attribs, isItem = false) {
       return "<b>" + Math.abs(attr[name]) + "</b>";
     });
   }
-  // template = template.replace(/\\n/g, "\n").replace(/<span.*>.*<\/span>/g, "<b>$&</b>"); //.replace(/<[^>]*>/g, "");
   if (isItem) {
     template = template.replace(/<br>/gi, '\n')
     const abilities = template.split("\\n")
     return catogerizeItemAbilities(abilities)
   }
-  template = template.replace(/\\n/g, "\n").replace(/<[^>]*>/g, "");
+  template = template.replace(/\\n/g, "\n");
+  // .replace(/<span.*>.*<\/span>/g, "<b>$&</b>"); //.replace(/<[^>]*>/g, "");
+  
+  // template = template.replace(/\\n/g, "\n").replace(/<[^>]*>/g, "");
   return template;
 }
 
